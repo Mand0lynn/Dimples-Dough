@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dimples & Dough</title>
+	<link rel="stylesheet" type="text/css" href="HomePage.css">
+</head>
+<body>
+
+	<!-- Header Section -->
+
+	<header class="header">
+        <div class="social-banner">
+            <!-- Added "Bake The World A Better Place" in the center with quotes -->
+            <div class="banner-text">"Bake The World A Better Place"</div>
+            <a href="https://www.instagram.com/dimplesanddough_wa/" target="_blank">
+                <img src="instagramlogo.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/people/Dimples-Dough/61560367472410/" target="_blank">
+                <img src="facebooklogo.png" alt="Facebook">
+            </a>
+        </div>
+        <div class="logo-container">
+            <img src="DandD.png" alt="Dimples & Dough Logo">
+        </div>
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#menu">Menu & Order</a>
+            <a href="#popups">Pop-Ups</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+	
+
+	<!-- Page Wide Photo -->
+	<section class="TopImage">
+		<img src="Valley.jpg" alt="Valley">
+		<div class="motto">Insert Words Here </div>
+	</section>
+		
+
+	<!-- Welcome Message -->
+	<section class="WelcomeMessage">
+		
+		<div class="row">
+  			<div class="column">
+  				<h3>Home Baked Goods From The Pacific Northwest!</h3>
+				<p>At Dimples & Dough, we belive baked goods are the best way<br> to spread love and happiness! <span><a href="#AboutPage">Read more...</a></span></p>
+			</div>
+  			
+  			<div class="column1">
+  				<img src="Gladys.jpeg" alt="Gladys" width="250px" height="300px" >
+  			</div>
+  		</div>	
+	</section>
+
+	<!-- Product Focus -->
+	<section class="ProductFocus">
+		<h3>Featured Items</h3>
+		
+
+		<!--Image carousel with seasonal and best selling products-->
+
+		<div class="slideshow-container">
+
+			  <!-- Full-width images with number and caption text -->
+
+			  <div class="mySlides fade">
+			    <div class="numbertext">1 / 5</div>
+			    <img src="Atticus.jpeg" style="width:100%">
+			    <div class="text">Caption Text</div>
+			  </div>
+
+			  <div class="mySlides fade">
+			    <div class="numbertext">2 / 5</div>
+			    <img src="Norm.jpeg" style="width:100%">
+			    <div class="text">Caption Two</div>
+			  </div>
+
+			  <div class="mySlides fade">
+			    <div class="numbertext">3 / 5</div>
+			    <img src="Gladys.jpeg" style="width:100%">
+			    <div class="text">Caption Three</div>
+			  </div>
+
+			  <div class="mySlides fade">
+			    <div class="numbertext">4 / 5</div>
+			    <img src="HeidiNorm.jpeg" style="width:100%">
+			    <div class="text">Caption Three</div>
+			  </div>
+
+			  <div class="mySlides fade">
+			    <div class="numbertext">5 / 5</div>
+			    <img src="Marge.jpeg" style="width:100%">
+			    <div class="text">Caption Three</div>
+			  </div>
+
+			  <!-- Next and previous buttons -->
+			  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+			<br>
+
+			<!-- The dots/circles -->
+			<div style="text-align:center">
+			  <span class="dot" onclick="currentSlide(1)"></span>
+			  <span class="dot" onclick="currentSlide(2)"></span>
+			  <span class="dot" onclick="currentSlide(3)"></span>
+			  <span class="dot" onclick="currentSlide(4)"></span>
+			  <span class="dot" onclick="currentSlide(5)"></span>
+			</div>
+
+			<script type="text/javascript">
+					let slideIndex = 1;
+				showSlides(slideIndex);
+
+				// Next/previous controls
+				function plusSlides(n) {
+				  showSlides(slideIndex += n);
+				}
+
+				// Thumbnail image controls
+				function currentSlide(n) {
+				  showSlides(slideIndex = n);
+				}
+
+				function showSlides(n) {
+				  let i;
+				  let slides = document.getElementsByClassName("mySlides");
+				  let dots = document.getElementsByClassName("dot");
+				  if (n > slides.length) {slideIndex = 1}
+				  if (n < 1) {slideIndex = slides.length}
+				  for (i = 0; i < slides.length; i++) {
+				    slides[i].style.display = "none";
+				  }
+				  for (i = 0; i < dots.length; i++) {
+				    dots[i].className = dots[i].className.replace(" active", "");
+				  }
+				  slides[slideIndex-1].style.display = "block";
+				  dots[slideIndex-1].className += " active";
+				}
+			</script>
+	</section>
+
+	<!-- Engage & Order -->
+	<section class="EngageOrder">
+	<!-- Text inviting customers to contact about custom orders -->
+		<h3>Place an order today!</h3>
+		<p>Head over to our Menu & Ordering page to see our regular items as well as our seasonal bakes! If you don't find what you were looking for, don't worry. We do custom orders!</p>
+
+	</section>
+
+	<!-- Footer -->
+	<footer class="footer">
+        <div class="footer-logo">
+            <!-- Increased logo size in footer -->
+            <img src="DandD.png" alt="Dimples & Dough Logo">
+        </div>
+        <div class="footer-links">
+            <span class="menu-link">Menu</span> <!-- Bold and underlined Menu -->
+            <a href="#home">Home</a>
+            <a href="#menu-order">Menu & Order</a>
+            <a href="#pop-ups">Pop-Ups</a>
+            <a href="#about">About</a>
+        </div>
+        <div class="footer-links">
+            <span class="social-media">Social Media</span> <!-- Bold and underlined Social Media -->
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/dimplesanddough_wa/" target="_blank">
+                    <img src="instagramlogo.png" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/people/Dimples-Dough/61560367472410/" target="_blank">
+                    <img src="facebooklogo.png" alt="Facebook">
+                </a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <span class="contact">Contact</span> <!-- Bold and underlined Contact -->
+            <div class="footer-contact">
+                <p>Email: contact@dimplesanddough.com</p>
+                <p>Tel: (123) 456-7890</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Copyright Section -->
+    <div class="copyright">
+        &copy; 2025 Dimples & Dough. All rights reserved.
+    </div>
+
+</body>
+</html>
