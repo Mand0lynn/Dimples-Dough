@@ -9,6 +9,20 @@
     margin-bottom: 20px;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.header-header p,
+section p,
+hr.navline {
+  margin: 0;
+  padding: 0;
+}
+
+
+
 .socials {
     margin-top: 10px;
     margin-right: 10px;
