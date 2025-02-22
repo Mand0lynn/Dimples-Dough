@@ -5,46 +5,27 @@
 -->
 <link rel="stylesheet" type="text/css" href="carousel.css">
 
-<div class="carousel"> 
-    <!-- Code extracted from index.html-->
-    <!-- Radio Buttons -->
-    <input type="radio" name="position" />
-    <input type="radio" name="position" />
-    <input type="radio" name="position" checked/>
-    <input type="radio" name="position" />
-    <input type="radio" name="position" />
+<div class="outer-wrapper">
+  <div class="carousel-row">
 
-    <main id="carouselSlides">
-        <div class="item">
-            <img src="images/pie.jpg">
-            <h3 class="name">Blackberry Pie</h3>
-            <p class="caption">Fresh from the oven!</p>
-        </div>
+    <button class="carousel-button prev">
+      <img src="arrow-left.svg" alt="Previous">
+    </button>
 
-        <div class="item">
-            <img src="images/sunflowercake.jpg">
-            <h3 class="name">Sunflower Cake</h3>
-            <p class="caption">Custom cakes available</p>
-        </div>
+    <div class="carousel-container">
+      <ul class="carousel-track">
+        <li class="carousel-slide"><img src="blackforestcake.jpg" alt="Slide 5"></li>
+        <li class="carousel-slide"><img src="cheesecake.jpg" alt="Slide 1"></li>
+        <li class="carousel-slide"><img src="cookie.jpg" alt="Slide 2"></li>
+        <li class="carousel-slide"><img src="sunflowercake.jpg" alt="Slide 3"></li>
+        <li class="carousel-slide"><img src="fruittart.jpg" alt="Slide 4"></li>
+      </ul>
+    </div>
 
-        <div class="item">
-            <img src="images/cookie.jpg">
-            <h3 class="name">S'mores Cookie</h3>
-            <p class="caption">Gooey and Delicious!</p>
-        </div>
+    <button class="carousel-button next">
+      <img src="arrow-right.svg" alt="Next">
+    </button>
 
-        <div class="item">
-            <img src="images/cheesecake.jpg">
-            <h3 class="name">Biscoff Cheesecake</h3>
-            <p class="caption">Doesn't get better than this</p>
-        </div>
-
-        <div class="item">
-            <img src="images/blackforestcake.jpg">
-            <h3 class="name">Black Forest Cake</h3>
-            <p class="caption">Cocolate and cherries. What more could you want?</p>
-        </div>
-    </main>
+  </div>
 </div>
 
-</div>
