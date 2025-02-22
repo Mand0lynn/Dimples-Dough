@@ -1,123 +1,84 @@
-/* Carousel Styles */
+/*******************************************************
+ *               CAROUSEL LAYOUT STYLES
+ *******************************************************/
 
-#Carousel {
-    background-color: white;
-    height: 550px;
-    margin: 0;
-    display: grid;
-    grid-template-rows: 500px 0px;
-    grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr; 
-    align-items: center;
-    justify-items: center;
+.page-title {
+  text-align: center;
+  margin: 40px auto 20px;
+  font-size: 1.8rem;
 }
 
-.item img {
-    width: 250px;
-    height: 300px;
-    border-radius: 10px;
+/* Outer wrapper to contain the carousel and keep it from window edges */
+.outer-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.name {
-    margin-bottom: 2px;
-    color: black;
+/* A single row: [Left Arrow] [Carousel Container] [Right Arrow] */
+.carousel-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
-.caption {
-    font-style: italic;
-    margin-top: 2px;
-    color: #fcf5e5;
+/* Carousel container (e.g., 1120px for 3 slides + partial peeks) */
+.carousel-container {
+  width: 1120px;
+  overflow: hidden;
+  border: none;
+  background-color: transparent;
+  position: relative;
 }
 
-main#carouselSlides {
-    grid-row: 1 / 2;
-    grid-column: 1 / 8;
-    width: 100vw;
-    height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    transform-style: preserve-3d;
-    perspective: 100%;
-    --items: 5;
-    --middle: 3;
-    --position: 1;
-    pointer-events: none;
+/* The track is a flex container that we translate left/right */
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-div.item {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 1.0);
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #ffb2d9;
-    position: absolute;
-    width: 300px;
-    height: 400px;
-    --r: calc(var(--position) - var(--offset));
-    --abs: max(calc(var(--r) * -1), var(--r));
-    transition: all 0.25s linear;
-    transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-300px * var(--r)));
-    z-index: calc((var(--position) - var(--abs)));
+/* Each slide: 300px wide + 20px margin => 320px total */
+.carousel-slide {
+  width: 300px;
+  margin-right: 20px;
+  flex: 0 0 auto;
+  border: 2px solid pink;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
-input[type="radio"] {
-    accent-color: #ffb2d9;
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-div.item:nth-of-type(1) {
-    --offset: 1;
-}
-div.item:nth-of-type(2) {
-    --offset: 2;
-}
-div.item:nth-of-type(3) {
-    --offset: 3;
-}
-div.item:nth-of-type(4) {
-    --offset: 4;
-}
-div.item:nth-of-type(5) {
-    --offset: 5;
+/*******************************************************
+ *  OVERRIDE GLOBAL BUTTON STYLES FOR CAROUSEL ARROWS
+ *******************************************************/
+.carousel-button {
+  /* Force these to override global button styles */
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+
+  cursor: pointer; /* Keep pointer on hover */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-input:nth-of-type(1) {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-}
-
-input:nth-of-type(1):checked ~ main#carouselSlides {
-    --position: 1;
-}
-
-input:nth-of-type(2) {
-    grid-column: 3 / 4;
-    grid-row: 2 / 3;
-}
-input:nth-of-type(2):checked ~ main#carouselSlides {
-    --position: 2;
-}
-
-input:nth-of-type(3) {
-    grid-column: 4 /5;
-    grid-row: 2 / 3;
-}
-input:nth-of-type(3):checked ~ main#carouselSlides {
-    --position: 3;
-}
-
-input:nth-of-type(4) {
-    grid-column: 5 / 6;
-    grid-row: 2 / 3;
-}
-input:nth-of-type(4):checked ~ main#carouselSlides {
-    --position: 4;
-}
-
-input:nth-of-type(5) {
-    grid-column: 6 / 7;
-    grid-row: 2 / 3;
-}
-input:nth-of-type(5):checked ~ main#carouselSlides {
-    --position: 5;
+.carousel-button img {
+  width: 40px;
+  height: 40px;
+  /* Example color filter if needed:
+  filter: invert(35%) sepia(86%) saturate(1761%)
+          hue-rotate(315deg) brightness(101%) contrast(101%);
+  */
 }
