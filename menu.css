@@ -1,0 +1,112 @@
+/* General Styling */
+main {
+    padding: 5px;
+    text-align: center;
+}
+.menu-container {
+    max-width: 800px; /* Limits width */
+    margin: 50px auto; /* Centers the box */
+    padding: 20px; /* Adds spacing inside */
+    text-align: center; /* Centers text */
+}
+
+
+/* Introduction Section */
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 10 px;
+    flex-wrap: wrap;
+}
+
+.intro-image {
+    width: 150px;
+    height: auto;
+    max-width: 100%;
+}
+
+
+/* Staples & Seasonal Sections */
+#staples,
+#seasonal {
+    margin: 40px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Contact Section */
+#contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.contact-image {
+    width: 25%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+}
+
+.contact-form {
+    width: 50%;
+    max-width: 400px;
+    text-align: left;
+}
+
+.contact-form h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.contact-form p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Form Styling */
+.contact-form input,
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.contact-form input {
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    background: transparent;
+    border: 2px ff69b4;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: ff69b4;
+    color: white;
+}
+
+/* Dynamic Textarea */
+#message {
+    width: 100%;
+    min-height: 40px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: white;
+    font-family: inherit;
+    overflow-y: auto;
+}
+
+/* Form Message */
+.hidden {
+    display: none;
+}

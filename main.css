@@ -1,0 +1,103 @@
+/* Global Styles */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: black;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Global Links */
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff69b4;
+}
+
+/* Global Buttons */
+
+button,
+.button {  
+    display: inline-block;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border: 2px solid #ff69b4;
+    background: transparent;
+    color: black;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Hover Effect - Fully Pink with White Text */
+button:hover,
+.button:hover {
+    background: #ff69b4;  /* Fully pink */
+    color: white;         /* White text */
+    border: 2px solid #ff69b4; /* Keeps border color consistent */
+}
+
+
+/* Global Dividers */
+
+.divider {
+    width: 80%;
+    margin: 10px auto;
+    border: 1px solid #ff69b4;
+}
+
+/* Page Structure */
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Section Headers */
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+}
+
+/* Global Social Media Icons */
+
+.socials {
+    margin-top: 5px;
+    margin-right: 5px;
+    float: right;
+    height: 40px;
+    width: 40px;
+}
+
+.socials:hover {
+    background-color: antiquewhite;
+    padding: 5px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        text-align: center;
+    }
+}

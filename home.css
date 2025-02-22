@@ -1,0 +1,76 @@
+/*Top Image*/
+
+.TopImage {
+	position: relative;
+	border-bottom: 4px solid #ffb2d9;
+	
+}
+.TopImage img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	max-height: 400px;
+}
+.welcome-container {
+    max-width: 800px; /* Controls text width */
+    margin: 50px auto; /* Centers content horizontally */
+    padding: 20px; /* Adds spacing */
+    text-align: center; /* Centers h2 */
+}
+
+.welcome-container p {
+    text-align: center; /* Aligns paragraphs to the left */
+    margin: 0 auto; /* Ensures they remain within the container */
+    max-width: 750px; /* Keeps text from stretching */
+}
+
+
+.motto {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fcf5e5;
+	font-size: 30px;
+
+}
+/*Welcome Section*/
+
+body {
+      font-family: Montserrat, serif;
+    }
+
+.mainContainer {
+  margin-top: 200px;
+  display: flex;
+  
+}
+
+.cellOne {
+  flex: 50%;  
+  margin: 30px;
+  padding: 40px;
+  font-family: Montserrat, serif; 
+  background-color: #ffb2d9;
+  max-width: 50%; 
+  border-radius: 15px;  
+}
+
+.cellOne > h2 {
+  
+  text-align: center;
+  font-size: 50px;
+}
+
+.cellOne  p {
+  font-size: 30px;
+
+}
+
+.cellTwo {
+  max-height: 1000px;
+  margin: 20px 200px 20px 200px;
+  border-radius: 15px;
+}
