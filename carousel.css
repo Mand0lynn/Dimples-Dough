@@ -44,6 +44,7 @@
 /* Each slide: 300px wide + 20px margin => 320px total */
 .carousel-slide {
   width: 300px;
+  height: 300px;
   margin-right: 20px;
   flex: 0 0 auto;
   border: 2px #ff69b4;
@@ -56,6 +57,10 @@
   width: 100%;
   height: auto;
   display: block;
+}
+
+.outer-wrapper {
+  margin-bottom: 50px; 
 }
 
 /*******************************************************
@@ -82,3 +87,4 @@
           hue-rotate(315deg) brightness(101%) contrast(101%);
   */
 }
+
