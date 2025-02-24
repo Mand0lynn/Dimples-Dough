@@ -1,12 +1,15 @@
-
-
-
-.PopupMessage {
-    font-family: "Montserrat", serif;
-    text-align: left;
-    font-weight: normal;
-    text-decoration: underline #ffb2d9;
-    margin-top: 25px;
-    margin-bottom: 25px;
+/* Center everything inside .events-container */
+.events-container {
+  text-align: center;
 }
 
+/* (Optional) You can also adjust spacing if needed */
+.events-container p {
+  margin: 1rem 0; 
+}
+
+/* Keep buttons centered as well */
+.events-container a.button {
+  display: inline-block;
+  margin-top: 1rem;
+}
