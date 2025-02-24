@@ -1,7 +1,3 @@
-/*******************************************************
- *               CAROUSEL LAYOUT STYLES
- *******************************************************/
-
 .page-title {
   text-align: center;
   margin: 40px auto 20px;
@@ -13,6 +9,13 @@
   margin: 0 auto;
   padding: 0 20px;
   margin-bottom: 50px;
+}
+
+.carousel-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem; /* adjust as needed */
+  color: #333;       /* or your brand color */
 }
 
 .carousel-row {
@@ -38,33 +41,26 @@
   padding: 0;
 }
 
-/* If you want a border around the entire slide (including background) */
 .carousel-slide {
   width: 300px;
-  height: 300px;
+  height: 300px; /* optional fixed height */
   margin-right: 20px;
   flex: 0 0 auto;
-  /* Fix the border style here */
-  border: 2px solid #ff69b4;
-  border-radius: 4px;
-  background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  /* If you want a border around the entire slide, uncomment:
+     border: 2px solid #ff69b4;
+     border-radius: 4px;
+  */
 }
 
-/* If you prefer a border just around the image, do it here. 
-   Remove it if you only want the border around .carousel-slide. */
 .carousel-slide img {
   width: 100%;
   height: auto;
   display: block;
   border: 5px solid #ff69b4;
   border-radius: 4px;
-
 }
 
-/*******************************************************
- *  OVERRIDE GLOBAL BUTTON STYLES FOR CAROUSEL ARROWS
- *******************************************************/
+/* Arrows override global button styles */
 .carousel-button {
   background: none !important;
   border: none !important;
