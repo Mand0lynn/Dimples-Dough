@@ -1,77 +1,88 @@
-/*Top Image*/
+/* ====================== TOP IMAGE SECTION ====================== */
 
 .TopImage {
-	position: relative;
-	border-bottom: 4px solid #ffb2d9;
-	
+  position: relative;
+  border-bottom: 4px solid #ffb2d9;
 }
+
 .TopImage img {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	max-height: 400px;
+  display: block;
+  margin: 20px auto;
+  max-height: 400px;
 }
+
+/* The overlay text on the top image */
+.motto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 30px;
+
+  /* Text shadow to improve readability */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+
+  /*
+   OPTIONAL: If the image is very busy, uncomment to add a 
+   semi-transparent background behind the text:
+
+   background-color: rgba(0, 0, 0, 0.3);
+   padding: 10px 15px;
+   border-radius: 8px;
+  */
+}
+
+/* ====================== WELCOME SECTION ====================== */
+
 .welcome-container {
-    max-width: 800px; /* Controls text width */
-    margin: 50px auto; /* Centers content horizontally */
-    padding: 20px; /* Adds spacing */
-    text-align: center; /* Centers h2 */
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
 }
 
 .welcome-container p {
-    text-align: left; /* Aligns paragraphs to the left */
-    margin: 0 auto; /* Ensures they remain within the container */
-    max-width: 750px; /* Keeps text from stretching */
+  text-align: left;
+  margin: 0 auto;
+  max-width: 750px;
 }
 
-
-.motto {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	color: #fcf5e5;
-	font-size: 30px;
-
-}
-/*Welcome Section*/
+/* ====================== BODY & LAYOUT ====================== */
 
 body {
-      font-family: Montserrat, serif;
-      text-align: left;
-    }
+  font-family: Montserrat, serif;
+  text-align: left;
+}
 
 .mainContainer {
   margin-top: 200px;
   display: flex;
-  
 }
 
+/* First cell in the .mainContainer */
 .cellOne {
-  flex: 50%;  
+  flex: 50%;
   margin: 30px;
   padding: 40px;
-  font-family: Montserrat, serif; 
+  font-family: Montserrat, serif;
   background-color: #ffb2d9;
-  max-width: 50%; 
-  border-radius: 15px;  
+  max-width: 50%;
+  border-radius: 15px;
 }
 
 .cellOne > h2 {
-  
   text-align: center;
   font-size: 50px;
 }
 
-.cellOne  p {
+.cellOne p {
   font-size: 30px;
-
 }
 
+/* Second cell in the .mainContainer */
 .cellTwo {
   max-height: 1000px;
-  margin: 20px 200px 20px 200px;
+  margin: 20px 200px;
   border-radius: 15px;
 }

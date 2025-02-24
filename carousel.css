@@ -8,14 +8,13 @@
   font-size: 1.8rem;
 }
 
-/* Outer wrapper to contain the carousel and keep it from window edges */
 .outer-wrapper {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
+  margin-bottom: 50px;
 }
 
-/* A single row: [Left Arrow] [Carousel Container] [Right Arrow] */
 .carousel-row {
   display: flex;
   align-items: center;
@@ -23,7 +22,6 @@
   gap: 20px;
 }
 
-/* Carousel container (e.g., 1120px for 3 slides + partial peeks) */
 .carousel-container {
   width: 1120px;
   overflow: hidden;
@@ -32,7 +30,6 @@
   position: relative;
 }
 
-/* The track is a flex container that we translate left/right */
 .carousel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
@@ -41,47 +38,39 @@
   padding: 0;
 }
 
-/* Each slide: 300px wide + 20px margin => 320px total */
+/* If you want a border around the entire slide (including background) */
 .carousel-slide {
   width: 300px;
   height: 300px;
   margin-right: 20px;
   flex: 0 0 auto;
-  border: 2px #ff69b4;
+  /* Fix the border style here */
+  border: 2px solid #ff69b4;
   border-radius: 4px;
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
+/* If you prefer a border just around the image, do it here. 
+   Remove it if you only want the border around .carousel-slide. */
 .carousel-slide img {
   width: 100%;
   height: auto;
   display: block;
-}
+  border: 5px solid #ff69b4;
+  border-radius: 4px;
 
-.outer-wrapper {
-  margin-bottom: 50px; 
-}
-
-.carousel-slide img {
-  width: 100%;
-  height: auto;
-  display: block;/* Add or adjust this border: */
-  border: 2px solid #ff69b4 /* pick your color */
-  border-radius: 4px;     /* optional */
 }
 
 /*******************************************************
  *  OVERRIDE GLOBAL BUTTON STYLES FOR CAROUSEL ARROWS
  *******************************************************/
 .carousel-button {
-  /* Force these to override global button styles */
   background: none !important;
   border: none !important;
   padding: 0 !important;
   border-radius: 0 !important;
-
-  cursor: pointer; /* Keep pointer on hover */
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,9 +79,4 @@
 .carousel-button img {
   width: 40px;
   height: 40px;
-  /* Example color filter if needed:
-  filter: invert(35%) sepia(86%) saturate(1761%)
-          hue-rotate(315deg) brightness(101%) contrast(101%);
-  */
 }
-

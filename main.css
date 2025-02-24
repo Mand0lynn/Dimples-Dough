@@ -1,5 +1,5 @@
 /* Import Merriweather from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
 
 /* Global Styles */
 body {
@@ -66,7 +66,7 @@ h1, h3 {
 
 /* Override h2 to use Merriweather and pink color */
 h2 {
-    font-family: 'Merriweather', serif;
+    font-family: 'Libre Baskerville', serif;
     color: #ff69b4;
 }
 
