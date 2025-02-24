@@ -34,6 +34,8 @@ function initCarousel() {
   const partialPeek = 80;
   const numRealSlides = slides.length;
   if (!numRealSlides) return;
+
+  // Clone the first and last slides for infinite looping
   const firstClone = slides[0].cloneNode(true);
   const lastClone = slides[numRealSlides - 1].cloneNode(true);
   track.appendChild(firstClone);
@@ -44,7 +46,7 @@ function initCarousel() {
     return i * slideWidth - partialPeek;
   }
 
-  let currentIndex = 2;
+  let currentIndex = 1; // Start at the first real slide (index 1 because of the cloned last slide)
   track.style.transform = `translateX(-${getTranslateX(currentIndex)}px)`;
 
   function moveToSlide(i) {
@@ -53,28 +55,35 @@ function initCarousel() {
     currentIndex = i;
   }
 
+  // Next button click handler
   if (nextBtn) {
     nextBtn.addEventListener("click", () => {
       moveToSlide(currentIndex + 1);
     });
   }
 
+  // Previous button click handler
   if (prevBtn) {
     prevBtn.addEventListener("click", () => {
       moveToSlide(currentIndex - 1);
     });
   }
 
+  // Handle the transitionend event for infinite looping
   track.addEventListener("transitionend", () => {
     if (allSlides[currentIndex] === allSlides[allSlides.length - 1]) {
+      // If we're at the last clone, jump to the first real slide without animation
       track.style.transition = "none";
       currentIndex = 1;
       track.style.transform = `translateX(-${getTranslateX(currentIndex)}px)`;
-    }
-    if (allSlides[currentIndex] === allSlides[0]) {
+    } else if (allSlides[currentIndex] === allSlides[0]) {
+      // If we're at the first clone, jump to the last real slide without animation
       track.style.transition = "none";
       currentIndex = numRealSlides;
       track.style.transform = `translateX(-${getTranslateX(currentIndex)}px)`;
     }
   });
 }
+
+// Initialize the carousel
+initCarousel();
