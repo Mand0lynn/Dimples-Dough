@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Load header & footer
   fetch("header.html")
     .then(r => r.text())
     .then(d => document.getElementById("header").innerHTML = d);
@@ -7,46 +8,56 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(r => r.text())
     .then(d => document.getElementById("footer").innerHTML = d);
 
+  // If there's a #carousel on the page, load carousel.html and init
   const c = document.getElementById("carousel");
   if (c) {
     fetch("carousel.html")
       .then(r => r.text())
       .then(d => {
         c.innerHTML = d;
-        initCarousel();
+        initCarousel(); // Only call here, after the partial is inserted
       });
   }
 
-  if (document.body.classList.contains("menu-page")) {}
-
-  if (document.body.classList.contains("events-page")) {}
-
-  if (document.body.classList.contains("about-page")) {}
+  // Page-specific checks (menu, events, about, etc.)
+  if (document.body.classList.contains("menu-page")) {
+    // ...
+  }
+  if (document.body.classList.contains("events-page")) {
+    // ...
+  }
+  if (document.body.classList.contains("about-page")) {
+    // ...
+  }
 });
 
 function initCarousel() {
   const track = document.querySelector(".carousel-track");
-  if (!track) return;
+  if (!track) return; // If no carousel-track found, exit
+
   const slides = Array.from(track.children);
   const prevBtn = document.querySelector(".carousel-button.prev");
   const nextBtn = document.querySelector(".carousel-button.next");
-  const slideWidth = 320;
+
+  const slideWidth = 320; // 300px + 20px margin
   const partialPeek = 80;
   const numRealSlides = slides.length;
   if (!numRealSlides) return;
 
-  // Clone the first and last slides for infinite looping
+  // Clone first & last slides for infinite loop
   const firstClone = slides[0].cloneNode(true);
   const lastClone = slides[numRealSlides - 1].cloneNode(true);
   track.appendChild(firstClone);
   track.insertBefore(lastClone, slides[0]);
+
   const allSlides = Array.from(track.children);
 
   function getTranslateX(i) {
     return i * slideWidth - partialPeek;
   }
 
-  let currentIndex = 1; // Start at the first real slide (index 1 because of the cloned last slide)
+  // Start at index=1 so real slide #0 is partially visible on the left
+  let currentIndex = 1;
   track.style.transform = `translateX(-${getTranslateX(currentIndex)}px)`;
 
   function moveToSlide(i) {
@@ -71,19 +82,18 @@ function initCarousel() {
 
   // Handle the transitionend event for infinite looping
   track.addEventListener("transitionend", () => {
+    // If we land on the last clone (allSlides[allSlides.length - 1])
     if (allSlides[currentIndex] === allSlides[allSlides.length - 1]) {
-      // If we're at the last clone, jump to the first real slide without animation
-      track.style.transition = "none";
-      currentIndex = 1;
+      track.style.transition = "none"; // Fix typo here
+      currentIndex = 1; // Jump to the first real slide
       track.style.transform = `translateX(-${getTranslateX(currentIndex)}px)`;
-    } else if (allSlides[currentIndex] === allSlides[0]) {
-      // If we're at the first clone, jump to the last real slide without animation
-      track.style.transition = "none";
-      currentIndex = numRealSlides;
+    }
+    // If we land on the first clone (allSlides[0])
+    else if (allSlides[currentIndex] === allSlides[0]) {
+      track.style.transition = "none"; // Fix typo here
+      currentIndex = numRealSlides; // Jump to the last real slide
       track.style.transform = `translateX(-${getTranslateX(currentIndex)}px)`;
     }
   });
 }
 
-// Initialize the carousel
-initCarousel();

@@ -40,6 +40,9 @@
   margin: 0;
   padding: 0;
 }
+.carousel-slide:last-child {
+  margin-right: 0;
+}
 
 .carousel-slide {
   width: 300px;
