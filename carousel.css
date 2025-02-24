@@ -63,6 +63,14 @@
   margin-bottom: 50px; 
 }
 
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  display: block;/* Add or adjust this border: */
+  border: 2px solid #ff69b4 /* pick your color */
+  border-radius: 4px;     /* optional */
+}
+
 /*******************************************************
  *  OVERRIDE GLOBAL BUTTON STYLES FOR CAROUSEL ARROWS
  *******************************************************/

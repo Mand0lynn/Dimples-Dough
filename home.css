@@ -21,7 +21,7 @@
 }
 
 .welcome-container p {
-    text-align: center; /* Aligns paragraphs to the left */
+    text-align: left; /* Aligns paragraphs to the left */
     margin: 0 auto; /* Ensures they remain within the container */
     max-width: 750px; /* Keeps text from stretching */
 }

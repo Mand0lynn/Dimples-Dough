@@ -1,5 +1,7 @@
-/* Global Styles */
+/* Import Merriweather from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
 
+/* Global Styles */
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
@@ -10,7 +12,6 @@ body {
 }
 
 /* Global Links */
-
 a {
     text-decoration: none;
     font-weight: bold;
@@ -23,7 +24,6 @@ a:hover {
 }
 
 /* Global Buttons */
-
 button,
 .button {  
     display: inline-block;
@@ -38,17 +38,14 @@ button,
     border-radius: 5px;
 }
 
-/* Hover Effect - Fully Pink with White Text */
 button:hover,
 .button:hover {
-    background: #ff69b4;  /* Fully pink */
-    color: white;         /* White text */
-    border: 2px solid #ff69b4; /* Keeps border color consistent */
+    background: #ff69b4;  
+    color: white;         
+    border: 2px solid #ff69b4; 
 }
 
-
 /* Global Dividers */
-
 .divider {
     width: 80%;
     margin: 10px auto;
@@ -56,21 +53,24 @@ button:hover,
 }
 
 /* Page Structure */
-
 main {
     padding: 20px;
     text-align: center;
 }
 
 /* Section Headers */
-
-h1, h2, h3 {
+h1, h3 {
     font-family: 'Montserrat', sans-serif;
     color: black;
 }
 
-/* Global Social Media Icons */
+/* Override h2 to use Merriweather and pink color */
+h2 {
+    font-family: 'Merriweather', serif;
+    color: #ff69b4;
+}
 
+/* Global Social Media Icons */
 .socials {
     margin-top: 5px;
     margin-right: 5px;
@@ -85,7 +85,6 @@ h1, h2, h3 {
 }
 
 /* Responsive Design */
-
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
