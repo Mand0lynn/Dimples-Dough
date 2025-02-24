@@ -7,7 +7,7 @@ main {
     max-width: 800px; /* Limits width */
     margin: 50px auto; /* Centers the box */
     padding: 20px; /* Adds spacing inside */
-    text-align: center; /* Centers text */
+    text-align: left; /* Centers text */
 }
 
 
@@ -15,7 +15,7 @@ main {
 .intro {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     gap: 40px;
     padding: 10 px;
     flex-wrap: wrap;
@@ -33,14 +33,14 @@ main {
 #seasonal {
     margin: 40px auto;
     max-width: 800px;
-    text-align: center;
+    text-align: left;
 }
 
 /* Contact Section */
 #contact {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     gap: 40px;
     flex-wrap: wrap;
     padding: 20px;
