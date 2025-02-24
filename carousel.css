@@ -1,77 +1,91 @@
-.page-title {
-  text-align: center;
-  margin: 40px auto 20px;
-  font-size: 1.8rem;
+/* Contact Section */
+#contact {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 20px;
 }
 
-.outer-wrapper {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 20px;
-  margin-bottom: 50px;
+.contact-image {
+    width: 25%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
 }
 
-.carousel-title {
-  text-align: center;
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  color: #ff69b4;
+.contact-form {
+    width: 50%;
+    max-width: 400px;
+    text-align: left;
 }
 
-.carousel-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
+.contact-form h2 {
+    font-size: 1.5rem;
+    color: #ff69b4;
+}
+
+.contact-form p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Form Styling */
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    /* Reduced the margin to tighten spacing: */
+    margin-bottom: 5px; 
+    font-size: 1rem;
+    box-sizing: border-box; /* Ensures consistent sizing */
+}
+
+.contact-form input,
+.contact-form textarea {
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    background: transparent;
+    border: 2px solid #ff69b4;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #ff69b4;
+    color: white;
+}
+
+/* Dynamic Textarea */
+#message {
+    width: 100%;
+    min-height: 40px;
+    background: white;
+    font-family: inherit;
+    overflow-y: auto;
+}
+
+/* Form Message */
+.hidden {
+    display: none;
 }
 
 .carousel-container {
-  width: 1120px;
   overflow: hidden;
-  border: none;
-  background-color: transparent;
-  position: relative;
+  width: 100%;
 }
 
 .carousel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .carousel-slide {
-  width: 300px;
-  height: 300px; 
-  margin-right: 20px;
-  flex: 0 0 auto;
-}
-
-.carousel-slide:last-child {
-  margin-right: 0;
-}
-
-.carousel-slide img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border: 5px solid #ff69b4;
-  border-radius: 4px;
-}
-
-.carousel-button {
-  background: none !important;
-  border: none !important;
-  padding: 0 !important;
-  border-radius: 0 !important;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.carousel-button img {
-  width: 40px;
-  height: 40px;
+  flex: 0 0 300px; /* Fixed width for each slide */
+  margin-right: 20px; /* Adjust spacing between slides */
 }
