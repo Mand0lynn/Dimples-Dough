@@ -23,8 +23,8 @@
 
 /* Center the logo + nav in a separate section */
 .header-logo-section {
-  text-align: center; /* ensures inline-block children are centered */
-  margin: 0 auto;
+  text-align: center;
+  margin: 20px auto 0 auto; /* 20px top margin */
 }
 
 /* Make the link only as wide as the image */
