@@ -39,45 +39,24 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    document.querySelector(".prev").addEventListener("click", prevSlide);
-    document.querySelector(".next").addEventListener("click", nextSlide);
-
     function toggleSlideshow() {
         let playPauseIcon = document.getElementById("playPauseIcon");
 
         if (isPaused) {
-            interval = setInterval(showSlides, 8000);
-            playPauseIcon.innerHTML = "⏸"; // Pause icon
+            interval = setInterval(showSlides, 8000); // Resume slideshow
+            playPauseIcon.innerHTML = "⏸"; // Change icon to pause
         } else {
-            clearInterval(interval);
-            playPauseIcon.innerHTML = "▶"; // Play icon
+            clearInterval(interval); // Stop slideshow
+            playPauseIcon.innerHTML = "▶"; // Change icon to play
         }
 
         isPaused = !isPaused;
     }
 
+    // Attach event listeners
+    document.querySelector(".prev").addEventListener("click", prevSlide);
+    document.querySelector(".next").addEventListener("click", nextSlide);
+    document.querySelector(".play-pause").addEventListener("click", toggleSlideshow);
+
     showSlides(); // Start the slideshow
-
-    // Carousel Logic
-    let carouselIndex = 0;
-    const carouselItems = document.querySelectorAll(".carousel-item");
-    const totalItems = carouselItems.length;
-    const visibleItems = 3; // Display three images at a time
-
-    function moveCarousel(direction) {
-        carouselIndex += direction;
-
-        if (carouselIndex < 0) {
-            carouselIndex = 0; // Prevent moving before first item
-        } else if (carouselIndex > totalItems - visibleItems) {
-            carouselIndex = totalItems - visibleItems; // Prevent moving past last set
-        }
-
-        const offset = -(carouselIndex * 100 / visibleItems);
-        document.querySelector(".carousel-wrapper").style.transform = `translateX(${offset}%)`;
-    }
-
-    // Attach event listeners to carousel arrows
-    document.querySelector(".carousel-arrow.prev").addEventListener("click", () => moveCarousel(-1));
-    document.querySelector(".carousel-arrow.next").addEventListener("click", () => moveCarousel(1));
 });
