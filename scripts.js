@@ -14,7 +14,11 @@ document.addEventListener("DOMContentLoaded", function () {
     let slideIndex = 0;
     let slides = document.querySelectorAll(".slide");
     let isPaused = false;
-    let interval = setInterval(showSlides, 8000); // Slower transition (8 seconds per slide)
+    let interval;
+
+    function startSlideshow() {
+        interval = setInterval(() => showSlides(true), 8000);
+    }
 
     function showSlides(next = true) {
         slides.forEach(slide => slide.style.opacity = "0");
@@ -35,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function restartSlideshow() {
         if (!isPaused) {
             clearInterval(interval);
-            interval = setInterval(showSlides, 8000);
+            startSlideshow();
         }
     }
 
@@ -43,11 +47,11 @@ document.addEventListener("DOMContentLoaded", function () {
         let playPauseIcon = document.getElementById("playPauseIcon");
 
         if (isPaused) {
-            interval = setInterval(showSlides, 8000); // Resume slideshow
-            playPauseIcon.innerHTML = "⏸"; // Change icon to pause
+            startSlideshow();
+            playPauseIcon.innerHTML = "⏸"; // Pause icon
         } else {
-            clearInterval(interval); // Stop slideshow
-            playPauseIcon.innerHTML = "▶"; // Change icon to play
+            clearInterval(interval);
+            playPauseIcon.innerHTML = "▶"; // Play icon
         }
 
         isPaused = !isPaused;
@@ -58,5 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".next").addEventListener("click", nextSlide);
     document.querySelector(".play-pause").addEventListener("click", toggleSlideshow);
 
-    showSlides(); // Start the slideshow
+    // Start the slideshow on page load
+    showSlides();
+    startSlideshow();
 });
