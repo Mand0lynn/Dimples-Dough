@@ -39,4 +39,28 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* The rest of your styles remain unchanged */
+/* Contact Section Image */
+.contact-image {
+    width: 80%;
+    max-width: 500px;
+    display: block;
+    margin: 20px auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-intro, .menu-layout {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .side-image, .menu-side-image {
+        width: 150px;
+    }
+
+    .contact-image {
+        width: 90%;
+    }
+}
