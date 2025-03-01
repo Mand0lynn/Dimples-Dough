@@ -1,7 +1,7 @@
-/* Developer Section (similar to .events, .about, etc.) */
+/* Developer Section */
 .developers {
     max-width: 1200px;
-    margin: 50px auto; 
+    margin: 50px auto;
     padding: 20px;
 }
 
@@ -9,20 +9,20 @@
 .developers-container {
     max-width: 1000px;
     margin: 0 auto;
-    text-align: center;
+    /* No global text-align here, so we can style paragraphs individually */
 }
 
 /* Center the H2 if desired */
 .developers-container h2 {
-    text-align: center; 
+    text-align: center;
     margin-bottom: 20px;
 }
 
-/* General paragraphs: NOT bold */
-.developers-container p {
-    text-align: right;
-    margin-bottom: 15px; 
-    font-weight: normal;  /* or remove entirely if you want the default weight */
+/* Intro paragraphs under h2: left-aligned */
+.developers-container > p {
+    text-align: left;
+    margin-bottom: 15px;
+    font-weight: normal;
 }
 
 /* Developer Grid */
@@ -35,13 +35,18 @@
     padding: 20px;
 }
 
-/* Individual Developer Card */
+/* Each Developer Card: center its contents */
 .developer {
     text-align: center;
     border: 1px solid #ddd;
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 10px;
+}
+
+/* Developer name <p> (inside each .developer) is bold */
+.developer > p {
+    font-weight: bold;
 }
 
 /* Developer Images */
@@ -51,11 +56,6 @@
     border-radius: 50%;
     margin-bottom: 10px;
     object-fit: cover;
-}
-
-/* Make the developer name bold, but not other <p> elements */
-.developer > p {
-    font-weight: bold;
 }
 
 /* Developer Links */

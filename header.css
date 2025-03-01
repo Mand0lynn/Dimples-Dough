@@ -1,67 +1,70 @@
-
-
 .header-header {
-    width: 100%;
-    height: 60px;
-    background: var(--primary-color); /* Use CSS variable for consistency */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-
+  width: 100%;
+  height: 60px;
+  background: var(--primary-color);
+  margin: 0;
+  padding: 0;
 }
 
+/* Social icons float to the right within the header bar */
 .socials {
-    margin-top: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    float: right;
-    height: 40px;
-    width: 40px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  float: right;
+  height: 40px;
+  width: 40px;
 }
 
 .socials:hover {
-    background-color: antiquewhite;
-    padding: 5px;
+  background-color: antiquewhite;
+  padding: 5px;
 }
 
+/* Center the logo + nav in a separate section */
 .header-logo-section {
-  text-align: center; /* Centers inline/inline-block children */
+  text-align: center; /* ensures inline-block children are centered */
   margin: 0 auto;
 }
 
-/* The link itself can be inline-block so it only wraps the image */
+/* Make the link only as wide as the image */
 .logo-link {
   display: inline-block;
-  margin: 0 auto; /* ensures horizontal centering if the parent is text-align: center */
+  margin: 0 auto;
 }
 
-/* The logo image is sized as you like */
+/* The logo itself */
 .logo {
   display: block;
-  width: 250px; 
+  width: 250px;
   height: auto;
-  margin: 0 auto 25px; 
+  margin: 0 auto 25px; /* bottom spacing */
 }
 
+/* Nav Bar Centered */
 .navbar {
-    text-align: center;
+  text-align: center;
 }
 
+/* Nav Links */
 .navbar a {
-    text-decoration: none;
-    color: var(--text-color); /* Use CSS variable for consistency */
-    margin-right: 43px;
-    font-family: var(--font-body);
-    font-size: 18px;
+  text-decoration: none;
+  color: var(--text-color);
+  margin-right: 43px;
+  font-family: var(--font-body);
+  font-size: 18px;
 }
 
+/* Hover effect for nav links */
 #hover:hover {
-    background-color: var(--primary-color); /* Use CSS variable for consistency */
-    color: white;
-    padding: 5px;
-    border-radius: 3px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
 }
 
+/* Pink line under the navbar */
 .navline {
-    border: 2px solid;
-    color: var(--primary-color); /* Use CSS variable for consistency */
+  border: 2px solid;
+  color: var(--primary-color);
 }
