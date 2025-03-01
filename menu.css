@@ -54,6 +54,7 @@
 .menu-items {
     flex: 1;
     text-align: left;
+    margin-bottom: 8px;
 }
 
 .menu-side-image {
