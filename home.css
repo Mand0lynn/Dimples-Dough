@@ -55,25 +55,29 @@
     z-index: 2;
 }
 
-/* Navigation Arrows */
+* Navigation Arrows */
 .prev, .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    /* Remove the oval background, make it transparent or none */
+    background: none;
     color: white;
     font-size: 24px;
     border: none;
     padding: 10px 15px;
     cursor: pointer;
-    z-index: 10; /* Ensures arrows appear above all elements */
-    border-radius: 50%;
+    z-index: 10;
+    /* No border-radius for a simple square/rectangle look */
+    border-radius: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0;           /* Start hidden */
+    pointer-events: none; /* Not clickable until hover */
+    transition: opacity 0.3s ease;
 }
 
-/* Ensure arrows are positioned correctly */
 .prev {
     left: 20px;
 }
@@ -82,9 +86,11 @@
     right: 20px;
 }
 
-/* Hover effect */
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+/* Only show arrows on hover */
+.slideshow-container:hover .prev,
+.slideshow-container:hover .next {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 /* Play/Pause Button */
@@ -93,18 +99,20 @@
     bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    /* Make it a square with no oval background */
+    background-color: black; /* or another color if you prefer */
     color: white;
     font-size: 18px;
     border: none;
     padding: 10px;
     cursor: pointer;
     z-index: 3;
-    border-radius: 50%;
+    border-radius: 0; /* square corners */
+    transition: background-color 0.3s ease;
 }
 
 .play-pause:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #333; /* slightly darker on hover */
 }
 
 /* First Slide is Visible Initially */
