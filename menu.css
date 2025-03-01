@@ -1,5 +1,5 @@
-/* Menu & Order Page Layout */
-.menu-intro, .menu-items {
+/* Introduction Section */
+.menu-intro {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,19 +7,15 @@
     max-width: 1200px;
     margin: 50px auto;
     padding: 20px;
+    text-align: left;
 }
 
 /* Side Images */
 .side-image {
-    width: 150px; /* Adjust image size */
+    width: 200px;
     height: auto;
     border-radius: var(--border-radius);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.menu-text, .menu-content {
-    flex: 1;
-    text-align: center;
 }
 
 /* Menu Layout */
@@ -27,34 +23,47 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
 }
 
-/* Menu Images */
-.menu-images {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+/* Menu Items */
+.menu-items {
+    flex: 2;
+    text-align: left;
 }
 
-.menu-images img {
-    width: 150px; /* Adjust width */
+/* Menu Side Images */
+.menu-side-image {
+    width: 200px;
     height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section Image */
+.contact-image {
+    width: 80%;
+    max-width: 500px;
+    display: block;
+    margin: 20px auto;
     border-radius: var(--border-radius);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .menu-intro, .menu-items {
+    .menu-intro, .menu-layout {
         flex-direction: column;
+        text-align: center;
     }
 
-    .side-image, .menu-images img {
-        width: 100px;
+    .side-image, .menu-side-image {
+        width: 150px;
     }
 
-    .menu-layout {
-        flex-direction: column;
+    .contact-image {
+        width: 90%;
     }
 }

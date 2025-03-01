@@ -1,28 +1,29 @@
-/* Carousel Container */
+/* Carousel Container with Added Padding */
 .carousel-container {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 1000px; /* Ensures proper layout */
+    max-width: 1000px;
     margin: auto;
     position: relative;
+    padding: 0 60px; /* Added padding for arrow space */
 }
 
-/* Carousel Wrapper */
+/* Carousel Wrapper Adjusted to Full Width of Container */
 .carousel-wrapper {
     display: flex;
     gap: 15px;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 100%;
     overflow: hidden;
-    position: relative; /* Ensures arrows stay outside */
+    position: relative;
 }
 
 /* Carousel Items */
 .carousel-item {
-    width: 30%; /* Ensures three images fit between the arrows */
+    width: 30%;
     flex-shrink: 0;
     text-align: center;
     transition: transform 0.5s ease-in-out;
@@ -34,7 +35,7 @@
     border-radius: 10px;
 }
 
-/* Navigation Arrows - Adjusted */
+/* Navigation Arrows */
 .carousel-arrow {
     position: absolute;
     top: 50%;
@@ -49,26 +50,18 @@
     border-radius: 50%;
 }
 
-/* Position Arrows Outside the Images */
+/* Position Arrows at the Container Edges */
 .prev {
-    left: -50px; /* Moves arrow outside of image */
+    left: 0;
 }
 
 .next {
-    right: -50px; /* Moves arrow outside of image */
+    right: 0;
 }
 
-.carousel-arrow:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Ensure responsiveness */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .prev {
-        left: -30px; /* Adjust for smaller screens */
-    }
-
-    .next {
-        right: -30px;
+    .carousel-container {
+        padding: 0 30px; /* Adjust padding for smaller screens */
     }
 }
