@@ -3,64 +3,124 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px; /* increased gap from 20px to 40px */
+    gap: 40px;
     max-width: 1200px;
     margin: 50px auto;
     padding: 20px;
+    /* We handle text alignment in child elements */
+}
+
+/* Keep the headings centered, but paragraphs left-aligned */
+.menu-intro h2 {
+    text-align: center;
+}
+.menu-intro p {
     text-align: left;
 }
 
 /* Side Images */
 .side-image {
-    margin: 0 20px; /* add horizontal space on each side */
+    margin: 0 20px;
     width: 200px;
     height: auto;
     border-radius: var(--border-radius);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Menu Layout */
+/* Menu Layout (Staples, Seasonal, etc.) */
 .menu-layout {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px; /* increased gap from 20px to 40px */
+    gap: 40px;
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
 }
 
+/* Headings centered, paragraphs left-aligned */
+.menu-layout h2 {
+    text-align: center;
+}
+.menu-layout p {
+    text-align: left;
+}
+
 /* Menu Side Images */
 .menu-side-image {
-    margin: 0 20px; /* add horizontal space on each side */
+    margin: 0 20px;
     width: 200px;
     height: auto;
     border-radius: var(--border-radius);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Contact Section Image */
+/* Contact Section Layout */
+#contact {
+    /* Turn the contact section into a flex container */
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 50px auto; /* Similar spacing as other sections */
+    padding: 20px;
+}
+
+/* Contact Image on the left */
 .contact-image {
-    width: 80%;
-    max-width: 500px;
-    display: block;
-    margin: 20px auto;
+    width: 50%;         /* or 40%, adjust as desired */
+    max-width: 400px;
     border-radius: var(--border-radius);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0;          /* remove auto margin */
+    display: block;
+}
+
+/* Contact Form on the right, left-aligned text */
+.contact-form {
+    flex: 1;            /* takes remaining space */
+    text-align: left;   /* ensure paragraphs/labels are left-aligned */
+}
+
+/* Center just the contact heading if desired */
+.contact-form h2 {
+    text-align: center; 
+}
+
+/* Remove extra space between email & message boxes */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* consistent spacing between form fields */
+}
+
+.contact-form form input[type="email"],
+.contact-form form textarea {
+    margin: 0;             /* remove default margins */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .menu-intro, .menu-layout {
+    .menu-intro,
+    .menu-layout,
+    #contact {
         flex-direction: column;
         text-align: center;
     }
 
-    .side-image, .menu-side-image {
+    .side-image,
+    .menu-side-image {
         width: 150px;
     }
 
     .contact-image {
         width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .contact-form {
+        text-align: center;
     }
 }

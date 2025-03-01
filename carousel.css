@@ -1,60 +1,41 @@
-/* Carousel Container with Added Padding */
 .carousel-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    max-width: 800px;
-    margin: auto;
     position: relative;
-    padding: 0 60px; /* Padding for arrow space */
+    max-width: 1000px; /* or your preference */
+    margin: auto;
+    padding: 0 40px;   /* space for arrows */
 }
 
-/* Carousel Wrapper (remove fixed width so items can be their own widths) */
 .carousel-wrapper {
     display: flex;
     gap: 15px;
     justify-content: center;
     align-items: center;
+    width: 100%;  /* Freed up to allow fixed card widths */
     overflow: hidden;
     position: relative;
 }
 
-/* Carousel Items: Fixed width for narrower pink background */
 .carousel-item {
-    /* If you have a pink background, add it here, e.g.: 
-       background-color: #ffd0e6; */
-    width: 320px;            /* Narrower card width */
+    background-color: #ffd0e6; 
+    width: 300px;
+    padding: 15px;
+    margin: 0 10px;
+    border-radius: 10px;
     flex-shrink: 0;
     text-align: center;
+    box-sizing: border-box;
     transition: transform 0.5s ease-in-out;
-    border-radius: 10px;     /* Rounded corners if desired */
-    box-sizing: border-box;  /* Ensures padding is included in total width */
-    padding: 10px;           /* Optional padding around the image/text */
 }
 
-/* Keep images at a consistent size */
 .carousel-item img {
-    width: 300px;   /* Slightly smaller than the card to leave pink space */
+    width: 100%;
     height: auto;
-    display: block; /* Eliminates default inline spacing */
-    margin: 0 auto; /* Centers the image inside the card */
     border-radius: 10px;
-}
-
-/* Navigation Arrows */
-.carousel-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px 15px;
-    z-index: 3;
-    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Position Arrows at the Container Edges */

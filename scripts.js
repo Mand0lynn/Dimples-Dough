@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  /***********************************************************
-   * 1) LOAD HEADER & FOOTER
-   ***********************************************************/
+  // LOAD HEADER & FOOTER
+
   fetch("header.html")
     .then(response => response.text())
     .then(data => {
@@ -16,9 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .catch(error => console.error("Error loading footer:", error));
 
-  /***********************************************************
-   * 2) LOAD & INSERT THE CAROUSEL HTML
-   ***********************************************************/
+  
+  //LOAD & INSERT THE CAROUSEL HTML
+   
   fetch("carousel.html")
     .then(response => response.text())
     .then(html => {
@@ -31,9 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .catch(error => console.error("Error loading carousel:", error));
 
-  /***********************************************************
-   * 3) TOP SLIDESHOW LOGIC
-   ***********************************************************/
+    //TOP SLIDESHOW LOGIC
+   
   let slideIndex = 0;
   let slides = document.querySelectorAll(".slide");
   let isPaused = false;
@@ -61,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Auto-rotate every 8 seconds
   function startSlideshow() {
-    interval = setInterval(() => showSlides(true), 8000);
+    interval = setInterval(() => showSlides(true), 6000);
   }
 
   // If user clicks Prev
@@ -104,9 +102,8 @@ document.addEventListener("DOMContentLoaded", function () {
   window.nextSlide = nextSlide;
   window.toggleSlideshow = toggleSlideshow;
 
-  /***********************************************************
-   * 4) CAROUSEL LOGIC (INITIALIZED AFTER HTML IS LOADED)
-   ***********************************************************/
+  //CAROUSEL LOGIC (INITIALIZED AFTER HTML IS LOADED)
+  
   function initCarousel() {
     // We'll look up the newly inserted .carousel-item elements
     let currentIndex = 0;
