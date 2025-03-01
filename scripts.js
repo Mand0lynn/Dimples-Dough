@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Start auto-rotation every 8 seconds
   function startSlideshow() {
-    interval = setInterval(() => showSlides(true), 8000);
+    interval = setInterval(() => showSlides(true), 6000);
   }
 
   // Restart if not paused
