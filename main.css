@@ -88,7 +88,7 @@ button:hover,
 
 /* Page Structure */
 main {
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 }
 
@@ -141,7 +141,7 @@ p {
     }
 
     main {
-        padding: 15px;
+        padding: 10px;
     }
 
     .footer-links {
