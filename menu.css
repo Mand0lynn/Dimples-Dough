@@ -1,107 +1,60 @@
-/* General Styling */
-main {
-    padding: 5px;
-    text-align: center;
-}
-.menu-container {
-    max-width: 800px; /* Limits width */
-    margin: 50px auto; /* Centers the box */
-    padding: 20px; /* Adds spacing inside */
-    text-align: left; /* Centers text */
-}
-
-
-/* Introduction Section */
-.intro {
+/* Menu & Order Page Layout */
+.menu-intro, .menu-items {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
-    padding: 10 px;
-    flex-wrap: wrap;
-}
-
-.intro-image {
-    width: 150px;
-    height: auto;
-    max-width: 100%;
-}
-
-
-/* Staples & Seasonal Sections */
-#staples,
-#seasonal {
-    margin: 40px auto;
-    max-width: 800px;
-    text-align: left;
-}
-
-/* Contact Section */
-
-#contact {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 50px auto;
     padding: 20px;
 }
 
-.contact-image {
-    width: 45%;
-    max-width: 600px;
+/* Side Images */
+.side-image {
+    width: 150px; /* Adjust image size */
     height: auto;
-    object-fit: cover;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.contact-form {
-    width: 50%;
-    max-width: 400px;
-    text-align: left;
-}
-
-.contact-form h2 {
-    font-size: 1.5rem;
-    color: #333;
-}
-
-.contact-form p {
-    font-size: 18px;
-    color: #666;
+.menu-text, .menu-content {
+    flex: 1;
     text-align: center;
 }
 
-/* Form Styling */
-.contact-form input,
-.contact-form button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    font-size: 15px;
-    font-family: var(--font-body);
+/* Menu Layout */
+.menu-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-.contact-form input {
-    border: 1px solid #ccc;
-
+/* Menu Images */
+.menu-images {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
+.menu-images img {
+    width: 150px; /* Adjust width */
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-intro, .menu-items {
+        flex-direction: column;
+    }
 
-/* Dynamic Textarea */
-#message {
-    width: 100%;
-    min-height: 40px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    background: white;
-    font-family: inherit;
-    overflow-y: auto;
-    font-size: 15px;
-    font-family: var(--font-body);
+    .side-image, .menu-images img {
+        width: 100px;
+    }
 
-/* Form Message */
-.hidden {
-    display: none;
+    .menu-layout {
+        flex-direction: column;
+    }
 }

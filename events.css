@@ -1,57 +1,64 @@
 /* Events Page Container - Flexbox Layout */
 .events-container {
-    max-width: 1200px; 
-    margin: 50px auto; 
-    padding: 20px; 
-    display: flex; 
-    align-items: center; 
-    gap: 40px; 
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures image stays on the right */
+    gap: 40px;
 }
 
 /* Text Content Styling */
 .events-container .text-content {
-    flex: 1; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
+    flex: 1; /* Takes up remaining space */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns text to the left */
 }
 
 /* Center the h2 element */
 .events-container .text-content h2 {
-    text-align: center; 
-    width: 100%; 
+    text-align: center;
+    width: 100%;
 }
 
 /* Left-align the rest of the text */
 .events-container .text-content p {
-    text-align: left; 
-    width: 100%; 
+    text-align: left;
+    width: 100%;
 }
 
 /* Button Styling for Events Page */
 .events-container .button {
     margin-top: 20px;
-    align-self: center; 
-    display: inline-block; 
+    align-self: center;
+    display: inline-block;
 }
 
 /* Image Styling */
 .events-container .event-image {
-    max-width: 400px; 
-    height: auto; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    flex: 0 0 400px; /* Keeps image at a fixed size */
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-self: center; /* Ensures proper alignment */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .events-container {
-        flex-direction: column; 
-        text-align: left; 
-        gap: 20px; 
+        flex-direction: column; /* Stacks content for mobile */
+        text-align: center;
+        gap: 20px;
+    }
+
+    .events-container .text-content {
+        align-items: center; /* Centers text for small screens */
     }
 
     .events-container .event-image {
-        max-width: 100%; 
+        max-width: 100%;
     }
 }
