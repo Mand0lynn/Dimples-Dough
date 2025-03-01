@@ -20,7 +20,7 @@
 
 /* General paragraphs: NOT bold */
 .developers-container p {
-    text-align: center;
+    text-align: right;
     margin-bottom: 15px; 
     font-weight: normal;  /* or remove entirely if you want the default weight */
 }
