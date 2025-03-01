@@ -1,67 +1,73 @@
-/* About Section - Flexbox Layout */
+/* About section: Flexbox layout to center content horizontally and vertically */
 .about {
     display: flex;
-    align-items: center; 
-    justify-content: center;
-    gap: 40px; 
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 20px; 
+    align-items: center; /* Vertically centers content */
+    justify-content: center; /* Horizontally centers content */
+    gap: 40px; /* Adds space between child elements */
+    max-width: 1200px; /* Limits the maximum width of the section */
+    margin: 50px auto; /* Centers the section horizontally with top/bottom margin */
+    padding: 20px; /* Adds internal padding */
 }
 
-/* About Image Styling */
+/* About image container: Takes up half the space and centers the image */
 .about-image {
-    flex: 1; 
-    max-width: 50%; 
+    flex: 1; /* Allows the image to grow and take available space */
+    max-width: 50%; /* Limits the image container to half the section width */
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centers the image horizontally */
 }
 
+/* About image styling: Ensures the image is responsive and visually appealing */
 .about-image img {    
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Makes the image responsive */
+    max-width: 500px; /* Limits the image's maximum width */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px; /* Rounds the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
 }
 
-/* About Text Styling */
+/* About text container: Takes up half the space and aligns text to the left */
 .about-text {
-    flex: 1; 
-    max-width: 50%; 
-    text-align: left;
+    flex: 1; /* Allows the text to grow and take available space */
+    max-width: 50%; /* Limits the text container to half the section width */
+    text-align: left; /* Aligns text to the left */
 }
 
+/* About heading: Large font size with bottom margin for spacing */
 .about-text h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 2rem; /* Sets a large font size for the heading */
+    margin-bottom: 20px; /* Adds space below the heading */
 }
 
+/* About paragraph: Line height and bottom margin for readability */
 .about-text p {
-    line-height: 1.6; 
-    margin-bottom: 20px;
+    line-height: 1.6; /* Improves readability with increased line height */
+    margin-bottom: 20px; /* Adds space below each paragraph */
 }
 
+/* About button: Centers the button and adds top margin */
 .about-text .button {
-    margin-top: 20px; 
-    text-align: center; 
-    display: inline-block; 
+    margin-top: 20px; /* Adds space above the button */
+    text-align: center; /* Centers the button text */
+    display: inline-block; /* Ensures the button behaves as a block element */
 }
 
-/* Responsive Design */
+/* Responsive design: Adjusts layout for screens smaller than 768px */
 @media (max-width: 768px) {
     .about {
-        flex-direction: column; 
-        text-align: center; 
-        gap: 20px; 
+        flex-direction: column; /* Stacks image and text vertically */
+        text-align: center; /* Centers text for mobile */
+        gap: 20px; /* Reduces space between stacked elements */
     }
 
+    /* Adjusts image and text containers to take full width on mobile */
     .about-image,
     .about-text {
-        max-width: 100%; 
+        max-width: 100%; /* Allows full width for stacked layout */
     }
 
+    /* Ensures the image takes full width on mobile */
     .about-image img {
-        max-width: 100%; 
+        max-width: 100%; /* Makes the image responsive to the container */
     }
 }

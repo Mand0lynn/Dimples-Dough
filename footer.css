@@ -1,83 +1,94 @@
+/* Footer: Styles for the footer section */
 .footer {
-    background-color: #ffb2d9;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 20px 40px;
-    margin-top: 60px;
+    background-color: #ffb2d9; /* Sets the background color */
+    display: flex; /* Uses Flexbox for layout */
+    align-items: flex-start; /* Aligns items to the top */
+    justify-content: space-between; /* Spaces items evenly */
+    padding: 20px 40px; /* Adds padding inside the footer */
+    margin-top: 60px; /* Adds space above the footer */
 }
 
+/* Footer Logo: Styles for the logo image */
 .footer img {
-    height: 200px;
-    width: 200px;
+    height: 200px; /* Fixed height for the logo */
+    width: 200px; /* Fixed width for the logo */
 }
 
+/* Social Media Icons: Styles for Instagram and Facebook icons */
 #instagram, #facebook {
-    width: 40px;
-    height: auto;
+    width: 40px; /* Fixed width for social media icons */
+    height: auto; /* Maintains aspect ratio */
 }
 
+/* Footer Links: Styles for the links section */
 .footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    display: flex; /* Uses Flexbox for layout */
+    flex-direction: column; /* Stacks links vertically */
+    gap: 10px; /* Adds space between links */
 }
 
+/* Footer Links: Styles for individual links */
 .footer-links a {
-    font-family: 'Montserrat', sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
+    font-family: 'Montserrat', sans-serif; /* Sets the font family */
+    font-optical-sizing: auto; /* Ensures optimal font rendering */
+    font-weight: 400; /* Sets the font weight */
+    font-style: normal; /* Ensures normal font style */
+    font-size: 16px; /* Sets the font size */
 
-    text-decoration: none;
-    color:black;
+    text-decoration: none; /* Removes underline from links */
+    color: black; /* Sets the link color */
 }
 
-.menu{
-    font-family: "Playwrite IT Moderna", cursive;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 18px;
+/* Menu: Styles for menu items */
+.menu {
+    font-family: "Playwrite IT Moderna", cursive; /* Sets the font family */
+    font-optical-sizing: auto; /* Ensures optimal font rendering */
+    font-weight: 400; /* Sets the font weight */
+    font-style: normal; /* Ensures normal font style */
+    font-size: 18px; /* Sets the font size */
 
-    color:black;
+    color: black; /* Sets the text color */
 }
 
+/* Menu Item Hover: Adds a background color and padding on hover */
 .menuitem:hover {
-    background-color: antiquewhite;
-    padding: 5px;
+    background-color: antiquewhite; /* Changes background color on hover */
+    padding: 5px; /* Adds padding on hover */
 }
 
-/* Footer Social Media Icons */
+/* Footer Social Media Icons: Styles for the social media icons container */
 .footer-socials {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
+    display: flex; /* Uses Flexbox for layout */
+    gap: 15px; /* Adds space between icons */
+    justify-content: center; /* Centers icons horizontally */
+    align-items: center; /* Centers icons vertically */
 }
 
+/* Footer Social Media Icons: Styles for individual icons */
 .footer-socials img {
-    height: 30px;
-    width: auto;
+    height: 30px; /* Fixed height for icons */
+    width: auto; /* Maintains aspect ratio */
 }
 
+/* Footer Contact: Styles for contact information */
 .footer-contact p {
-    font-family: 'Montserrat', sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    margin: 0;
+    font-family: 'Montserrat', sans-serif; /* Sets the font family */
+    font-optical-sizing: auto; /* Ensures optimal font rendering */
+    font-weight: 400; /* Sets the font weight */
+    font-style: normal; /* Ensures normal font style */
+    font-size: 16px; /* Sets the font size */
+    margin: 0; /* Removes default margin */
 }
 
+/* Footer Contact: Adds space between paragraphs except the last one */
 .footer-contact p:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Adds space below each paragraph */
 }
 
+/* Copyright: Styles for the copyright text */
 .copyright {
-    text-align: center;
-    font-size: 15px;
-    margin-top: 20px;
-    color: black;
+    text-align: center; /* Centers the text */
+    font-size: 15px; /* Sets the font size */
+    margin-top: 20px; /* Adds space above the text */
+    color: black; /* Sets the text color */
 }

@@ -1,70 +1,72 @@
+/* Header Bar: Styles for the top header section */
 .header-header {
-  width: 100%;
-  height: 60px;
-  background: var(--primary-color);
-  margin: 0;
-  padding: 0;
+  width: 100%; /* Full width */
+  height: 60px; /* Fixed height */
+  background: var(--primary-color); /* Uses the primary color for the background */
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
 }
 
-/* Social icons float to the right within the header bar */
+/* Social Icons: Styles for social media icons in the header */
 .socials {
-  margin-top: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  float: right;
-  height: 40px;
-  width: 40px;
+  margin-top: 10px; /* Adds space above the icons */
+  margin-right: 10px; /* Adds space to the right of the icons */
+  margin-bottom: 10px; /* Adds space below the icons */
+  float: right; /* Floats icons to the right */
+  height: 40px; /* Fixed height for icons */
+  width: 40px; /* Fixed width for icons */
 }
 
+/* Social Icons Hover: Adds a background color and padding on hover */
 .socials:hover {
-  background-color: antiquewhite;
-  padding: 5px;
+  background-color: antiquewhite; /* Changes background color on hover */
+  padding: 5px; /* Adds padding on hover */
 }
 
-/* Center the logo + nav in a separate section */
+/* Logo Section: Centers the logo and navigation */
 .header-logo-section {
-  text-align: center;
+  text-align: center; /* Centers content horizontally */
 }
 
-/* Make the link only as wide as the image */
+/* Logo Link: Ensures the link is only as wide as the image */
 .logo-link {
-  display: inline-block;
-  margin: 0 auto;
+  display: inline-block; /* Makes the link behave like a block element */
+  margin: 0 auto; /* Centers the link horizontally */
 }
 
-/* The logo itself */
+/* Logo: Styles for the logo image */
 .logo {
-  display: block;
-  width: 250px;
-  height: auto;
-  margin-top: 50px;
-  margin-bottom: 25px; /* bottom spacing */
+  display: block; /* Ensures the logo behaves as a block element */
+  width: 250px; /* Fixed width for the logo */
+  height: auto; /* Maintains aspect ratio */
+  margin-top: 50px; /* Adds space above the logo */
+  margin-bottom: 25px; /* Adds space below the logo */
 }
 
-/* Nav Bar Centered */
+/* Navbar: Centers the navigation links */
 .navbar {
-  text-align: center;
+  text-align: center; /* Centers the navigation links */
 }
 
-/* Nav Links */
+/* Nav Links: Styles for navigation links */
 .navbar a {
-  text-decoration: none;
-  color: var(--text-color);
-  margin-right: 43px;
-  font-family: var(--font-body);
-  font-size: 18px;
+  text-decoration: none; /* Removes underline from links */
+  color: var(--text-color); /* Uses the text color variable */
+  margin-right: 43px; /* Adds space between links */
+  font-family: var(--font-body); /* Uses the body font variable */
+  font-size: 18px; /* Sets the font size */
 }
 
-/* Hover effect for nav links */
+/* Nav Links Hover: Adds a background color and padding on hover */
 #hover:hover {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 5px;
-  border-radius: 3px;
+  background-color: var(--primary-color); /* Changes background color on hover */
+  color: white; /* Changes text color on hover */
+  padding: 5px; /* Adds padding on hover */
+  border-radius: 3px; /* Rounds the corners */
 }
 
-/* Pink line under the navbar */
+/* Navline: Adds a pink line below the navbar */
 .navline {
-  border: 2px solid;
-  color: var(--primary-color);
+  border: 2px solid; /* Sets the border thickness */
+  color: var(--primary-color); /* Uses the primary color for the line */
 }

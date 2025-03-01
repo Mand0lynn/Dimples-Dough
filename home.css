@@ -1,175 +1,184 @@
 /* Home Page Styles */
 
-/* Slideshow Container */
+/* Slideshow Container: Holds the slideshow and ensures proper sizing */
 .TopImage {
     position: relative;
     width: 100%;
     height: 400px; /* Adjust height as needed */
-    overflow: hidden;
+    overflow: hidden; /* Ensures images don't overflow the container */
 }
 
+/* Slideshow Container: Positions slides and handles transitions */
 .slideshow-container {
     position: relative;
     width: 100%;
     height: 100%;
 }
 
-/* Slides */
+/* Slides: Styles for individual slides */
 .slide {
     position: absolute;
     width: 100%;
     height: 100%;
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 1.5s ease-in-out; /* Smooth transition between slides */
 }
 
+/* Slide Images: Ensures images fill the container properly */
 .slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures images fill the space properly */
+    object-fit: cover; /* Ensures images cover the space without distortion */
 }
 
-/* Overlay to Darken the Image */
+/* Overlay: Darkens the image for better text visibility */
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+    z-index: 1; /* Ensures overlay is above the image but below text */
 }
 
-/* Centered Text Message */
+/* Centered Text Message: Styles for the motto text */
 .motto {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: var(--font-body);
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
-    z-index: 2;
+    transform: translate(-50%, -50%); /* Centers the text */
+    font-family: var(--font-body); /* Uses the body font variable */
+    color: white; /* White text for contrast */
+    font-size: 40px; /* Large font size */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Centers text horizontally */
+    text-transform: uppercase; /* Uppercase text */
+    z-index: 2; /* Ensures text is above the overlay */
 }
 
-/* Navigation Arrows */
+/* Navigation Arrows: Styles for previous and next buttons */
 .prev,
 .next {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    background: none;       /* No background */
-    color: white;
-    font-size: 24px;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    z-index: 10;
-    border-radius: 0;       /* Square corners */
+    transform: translateY(-50%); /* Centers vertically */
+    background: none; /* No background */
+    color: white; /* White arrow color */
+    font-size: 24px; /* Arrow size */
+    border: none; /* No border */
+    padding: 10px 15px; /* Adds padding for clickable area */
+    cursor: pointer; /* Changes cursor to pointer */
+    z-index: 10; /* Ensures arrows are above other elements */
+    border-radius: 0; /* Square corners */
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0;             /* Hidden by default */
-    pointer-events: none;   /* Not clickable until hover */
-    transition: opacity 0.3s ease;
+    opacity: 0; /* Hidden by default */
+    pointer-events: none; /* Not clickable until hover */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
 }
 
+/* Previous Arrow: Positions the previous arrow */
 .prev {
-    left: 20px;
+    left: 20px; /* Positions arrow on the left */
 }
 
+/* Next Arrow: Positions the next arrow */
 .next {
-    right: 20px;
+    right: 20px; /* Positions arrow on the right */
 }
 
-/* Show arrows on hover */
+/* Show arrows on hover: Makes arrows visible when hovering over the slideshow */
 .slideshow-container:hover .prev,
 .slideshow-container:hover .next {
-    opacity: 1;
-    pointer-events: auto;
+    opacity: 1; /* Fully visible */
+    pointer-events: auto; /* Makes arrows clickable */
 }
 
-/* Play/Pause Button */
+/* Play/Pause Button: Styles for the play/pause button */
 .play-pause {
     position: absolute;
-    bottom: 15px;
+    bottom: 15px; /* Positions button at the bottom */
     left: 50%;
-    transform: translateX(-50%);
-    background-color: black; /* or another color if you prefer */
-    color: white;
-    font-size: 18px;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 3;
-    border-radius: 0; /* square corners */
-    transition: background-color 0.3s ease;
+    transform: translateX(-50%); /* Centers horizontally */
+    background-color: rgba(0, 0, 0, 0, 40%); /* Button background color */
+    color: white; /* Button text color */
+    font-size: 18px; /* Button text size */
+    border: none; /* No border */
+    padding: 10px; /* Adds padding */
+    cursor: pointer; /* Changes cursor to pointer */
+    z-index: 3; /* Ensures button is above slides */
+    border-radius: 0; /* Square corners */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
 }
 
+/* Play/Pause Button Hover: Changes background color on hover */
 .play-pause:hover {
-    background-color: #333; /* slightly darker on hover */
+    background-color: rgba(0, 0, 0, 0, 40%); /* Button background color */
 }
 
-/* First Slide is Visible Initially */
+/* First Slide: Ensures the first slide is visible initially */
 .slide:first-child {
-    opacity: 1;
+    opacity: 1; /* Fully visible */
 }
 
-/* Welcome Section */
+/* Welcome Section: Styles for the welcome message section */
 .welcome-container {
-    max-width: 800px;
-    margin: 50px auto; 
-    padding: 20px;
-    text-align: center;
+    max-width: 800px; /* Limits the width of the container */
+    margin: 50px auto; /* Centers the container horizontally */
+    padding: 20px; /* Adds internal padding */
+    text-align: center; /* Centers text horizontally */
 }
+
+/* Welcome Section Paragraphs: Styles for paragraphs inside the welcome section */
 .welcome-container p {
-    text-align: left;
-    margin: 0 auto;
-    max-width: 750px;
+    text-align: left; /* Aligns text to the left */
+    margin: 0 auto; /* Centers paragraphs horizontally */
+    max-width: 750px; /* Limits paragraph width */
 }
 
-/* Global Section Divider */
+/* Global Section Divider: Adds a decorative divider between sections */
 .divider {
-    width: 80%;
-    margin: 50px auto;
-    border: 1px solid #ff69b4;
+    width: 80%; /* Sets the width of the divider */
+    margin: 50px auto; /* Centers the divider horizontally */
+    border: 1px solid #ff69b4; /* Pink border color */
 }
 
-/* Call-to-Action Button */
+/* Call-to-Action Button: Styles for buttons */
 .button {
     display: inline-block;
-    font-size: 1rem;
-    padding: 10px 15px;
-    border: 2px solid #ff69b4;
-    background: #ffb2d9;
-    color: black;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-    text-align: center;
-    border-radius: 10px;
-    font-family: "Playwrite IT Moderna", cursive;
-    font-weight: normal;
-}
-.button:hover {
-    background: #ff69b4;
-    color: white;
-    border: 2px solid #ff69b4;
+    font-size: 1rem; /* Button text size */
+    padding: 10px 15px; /* Adds padding */
+    border: 2px solid #ff69b4; /* Pink border */
+    background: #ffb2d9; /* Light pink background */
+    color: black; /* Black text */
+    cursor: pointer; /* Changes cursor to pointer */
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth hover effect */
+    text-align: center; /* Centers text horizontally */
+    border-radius: 10px; /* Rounded corners */
+    font-family: "Playwrite IT Moderna", cursive; /* Custom font */
+    font-weight: normal; /* Normal font weight */
 }
 
-/* Responsive Design */
+/* Button Hover: Changes background and text color on hover */
+.button:hover {
+    background: #ff69b4; /* Darker pink background */
+    color: white; /* White text */
+    border: 2px solid #ff69b4; /* Pink border */
+}
+
+/* Responsive Design: Adjusts styles for screens smaller than 768px */
 @media (max-width: 768px) {
     .TopImage {
-        height: 250px;
+        height: 250px; /* Reduces height for smaller screens */
     }
 
     .motto {
-        font-size: 24px;
+        font-size: 24px; /* Reduces font size for smaller screens */
     }
 
     .welcome-container {
-        padding: 15px;
+        padding: 15px; /* Reduces padding for smaller screens */
     }
 }

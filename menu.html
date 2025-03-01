@@ -6,18 +6,20 @@
     <title>Dimples & Dough | Menu</title>
 
     <!-- Global and Page-Specific CSS -->
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="main.css"> <!-- Global styles for the entire site -->
+    <link rel="stylesheet" href="menu.css"> <!-- Specific styles for the menu page -->
 </head>
 <body class="menu-page"> 
 
-    <!-- Header (Dynamically Loaded) -->
+    <!-- Header (Dynamically Loaded): Header content will be inserted here -->
     <div id="header"></div>
 
     <main>
-        <!-- Introduction Section -->
+        <!-- Introduction Section: Introduces the menu and invites users to explore -->
         <section class="menu-intro">
+            <!-- Left Image: Decorative image on the left -->
             <img src="images/Menu_Pies1.svg" alt="Intro Left Image" class="side-image">
+            <!-- Text Content: Describes the menu and includes a call-to-action button -->
             <div class="menu-text">
                 <h2>Sweet, Savory, and <br> Oh So Crave-Worthy!</h2>
                 <p>
@@ -26,21 +28,26 @@
                     <br><br>
                     Browse our offerings and let’s create something special together!
                 </p>
+                <!-- Call-to-Action Button: Links to the contact form -->
                 <div class="button-container">
                     <a href="#contact" class="button">Let's bake</a>
                 </div>
             </div>
+            <!-- Right Image: Decorative image on the right -->
             <img src="images/Menu_Pies2.svg" alt="Intro Right Image" class="side-image">
         </section>
 
+        <!-- Horizontal Divider: Matches the style of other pages -->
         <hr class="divider">
 
-        <!-- Staples Section -->
+        <!-- Staples Section: Lists always-available menu items -->
         <section id="staples">
             <h2>Staples – Always Available</h2>
             <div class="menu-layout">
+                <!-- Left Image: Decorative image on the left -->
                 <img src="images/Menu_Croissant.svg" alt="Left Image" class="menu-side-image">
 
+                <!-- Menu Items: Lists staple baked goods -->
                 <div class="menu-items">
                     <p><strong>Classic Cookies:</strong> Chocolate Chip, Brown Butter Snickerdoodle, Oatmeal Raisin</p><br>
                     <p><strong>Chewy Brownies & Blondies:</strong> Fudgy Brownies, Espresso Brownies, White Chocolate Blondies</p><br>
@@ -49,18 +56,22 @@
                     <p><strong>Shortbread & Butter Cookies:</strong> Buttery, crisp, and melt-in-your-mouth</p><br>
                 </div>
 
+                <!-- Right Image: Decorative image on the right -->
                 <img src="images/Menu_RaspberryCake.svg" alt="Right Image" class="menu-side-image">
             </div>
         </section>
 
+        <!-- Horizontal Divider: Matches the style of other pages -->
         <hr class="divider">
 
-        <!-- Seasonal Specials Section -->
+        <!-- Seasonal Specials Section: Lists limited-time seasonal offerings -->
         <section id="seasonal">
             <h2>Seasonal Offerings – Limited Time!</h2>
             <div class="menu-layout">
+                <!-- Left Image: Decorative image on the left -->
                 <img src="images/Menu_TartFruit.svg" alt="Left Image" class="menu-side-image">
 
+                <!-- Menu Items: Lists seasonal baked goods -->
                 <div class="menu-items">
                     <p><strong>Spring:</strong> Lemon Poppyseed Muffins, Strawberry Shortcake Bars</p><br>
                     <p><strong>Summer:</strong> Peach Cobbler Cookies, S’mores Brownies</p><br>
@@ -68,30 +79,39 @@
                     <p><strong>Winter:</strong> Hot Cocoa Cookies, Peppermint Bark Brownies</p><br>
                 </div>
 
+                <!-- Right Image: Decorative image on the right -->
                 <img src="images/Menu_Tart.svg" alt="Right Image" class="menu-side-image">
             </div>
         </section>
 
+        <!-- Horizontal Divider: Matches the style of other pages -->
         <hr class="divider">
 
-        <!-- Contact Section -->
+        <!-- Contact Section: Allows users to submit custom requests -->
         <section id="contact">
+            <!-- Contact Image: Decorative image on the left -->
             <img src="images/bakedgoodcounter.jpg" alt="Cookie Batter" class="contact-image">
+            <!-- Contact Form: Form for users to submit inquiries -->
             <div class="contact-form">
                 <h2>Don’t see what you’re craving?</h2>
                 <p>Let’s create something delicious together! Whether you have a vision or need ideas, I’m here to help.</p>
                 <form id="contact">
+                    <!-- Email Input: Field for the user's email -->
                     <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <!-- Message Textarea: Field for the user's message -->
                     <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+                    <!-- Submit Button: Submits the form -->
                     <button type="submit">Send Inquiry</button>
+                    <!-- Thank-You Message: Displayed after form submission -->
                     <p id="form-message" class="hidden">Thank you! Your message has been submitted.</p>
                 </form>
             </div>
         </section>
 
+        <!-- Horizontal Divider: Matches the style of other pages -->
         <hr class="divider">
 
-        <!-- Carousel (Dynamically Loaded) -->
+        <!-- Carousel (Dynamically Loaded): Embedded carousel for showcasing content -->
         <iframe src="carousel/GoodCarousel"
                 width="100%" 
                 height="500px" 
@@ -101,10 +121,10 @@
         </iframe>
     </main>
 
-    <!-- Footer (Dynamically Loaded) -->
+    <!-- Footer (Dynamically Loaded): Footer content will be inserted here -->
     <div id="footer"></div>
 
-    <!-- JavaScript for faster header/footer loading -->
+    <!-- JavaScript: Dynamically loads the header and footer -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             Promise.all([

@@ -9,19 +9,20 @@
     --secondary-color: #ff69b4; /* Secondary pink color */
     --text-color: black; /* Default text color */
     --font-primary: "Playwrite IT Moderna", cursive; /* For headings/buttons */
-    --font-secondary: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    --font-secondary: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Fallback font */
     --font-body: 'Montserrat', sans-serif; /* For body text */
     --border-radius: 10px; /* Default border radius for buttons, images, etc. */
     --transition-speed: 0.3s; /* Default transition speed for hover effects */
 }
 
-/* Global Reset */
+/* Global Reset: Removes default margins and padding */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensures padding and border are included in element dimensions */
 }
 
+/* Ensures the body and HTML take up the full height of the viewport */
 body, html {
     width: 100%;
     height: 100%;
@@ -29,136 +30,130 @@ body, html {
 
 /* Global Body Styles */
 body {
-    font-family: var(--font-body);
-    font-weight: 400;
-    font-size: 14px;
-    color: var(--text-color);
-    background-color: white;
+    font-family: var(--font-body); /* Uses Montserrat for body text */
+    font-weight: 400; /* Regular weight */
+    font-size: 14px; /* Base font size */
+    color: var(--text-color); /* Default text color */
+    background-color: white; /* White background */
     margin: 0;
     padding: 0;
 }
+
+/* Bold Text: Ensures strong and bold elements use Montserrat bold weight */
 strong, b {
   font-weight: 700;
 }
 
-/* or define a bold utility class if needed */
+/* Bold Utility Class: Optional class for bold text */
 .bold-text {
   font-weight: 700;
 }
 
-/* Global Links */
+/* Global Links: Styles for all anchor tags */
 a {
-    text-decoration: none;
-    font-weight: bold;
-    color: var(--text-color);
-    transition: color var(--transition-speed) ease;
+    text-decoration: none; /* Removes underline */
+    font-weight: bold; /* Makes links bold */
+    color: var(--text-color); /* Default link color */
+    transition: color var(--transition-speed) ease; /* Smooth color transition on hover */
 }
 
 a:hover {
-    color: var(--secondary-color);
+    color: var(--secondary-color); /* Changes link color on hover */
 }
 
-/* Global Buttons */
-.button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    text-align: center;
-}
-
+/* Global Buttons: Styles for buttons and button-like elements */
 button,
 .button {
     display: inline-block;
-    font-size: 1rem;
-    padding: 10px 15px;
-    border: 2px solid var(--secondary-color);
-    background: var(--primary-color);
-    color: var(--text-color);
-    cursor: pointer;
+    font-size: 1rem; /* Base font size */
+    padding: 10px 15px; /* Adds padding */
+    border: 2px solid var(--secondary-color); /* Pink border */
+    background: var(--primary-color); /* Light pink background */
+    color: var(--text-color); /* Black text */
+    cursor: pointer; /* Changes cursor to pointer */
     transition: background var(--transition-speed) ease-in-out,
-                color var(--transition-speed) ease-in-out;
-    text-align: center;
-    border-radius: var(--border-radius);
-    font-family: var(--font-primary);
-    font-weight: normal;
-    margin: 10px auto; 
+                color var(--transition-speed) ease-in-out; /* Smooth hover effects */
+    text-align: center; /* Centers text horizontally */
+    border-radius: var(--border-radius); /* Rounded corners */
+    font-family: var(--font-primary); /* Uses Playwrite IT Moderna for buttons */
+    font-weight: normal; /* Normal font weight */
+    margin: 10px auto; /* Adds margin for spacing */
 }
 
 button:hover,
 .button:hover {
-    background: var(--secondary-color);
-    color: white;
-    border: 2px solid var(--secondary-color);
+    background: var(--secondary-color); /* Darker pink background on hover */
+    color: white; /* White text on hover */
+    border: 2px solid var(--secondary-color); /* Pink border on hover */
 }
 
-/* Global Dividers */
+/* Global Dividers: Adds a decorative divider between sections */
 .divider {
-    width: 80%;
-    margin: 50px auto;
-    border: 1px solid var(--secondary-color);
+    width: 80%; /* Sets the width of the divider */
+    margin: 50px auto; /* Centers the divider horizontally */
+    border: 1px solid var(--secondary-color); /* Pink border color */
 }
 
-/* Page Structure */
+/* Page Structure: Ensures main content is centered and padded */
 main {
-    padding: 10px;
-    text-align: center;
+    padding: 10px; /* Adds padding */
+    text-align: center; /* Centers text horizontally */
 }
 
-/* Section Headers */
+/* Section Headers: Styles for headings */
 h1, h2, h3 {
-    font-family: var(--font-body);
-    color: var(--secondary-color);
+    font-family: var(--font-body); /* Uses Montserrat for headings */
+    color: var(--secondary-color); /* Pink text color */
 }
 
 h2 {
-    font-family: var(--font-primary);
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 35px;
-    text-align: center;
-    margin-bottom: 20px;
-    color: var(--secondary-color);
+    font-family: var(--font-primary); /* Uses Playwrite IT Moderna for h2 */
+    font-optical-sizing: auto; /* Ensures optimal font rendering */
+    font-weight: 400; /* Normal font weight */
+    font-style: normal; /* Normal font style */
+    font-size: 35px; /* Large font size */
+    text-align: center; /* Centers text horizontally */
+    margin-bottom: 20px; /* Adds space below the heading */
+    color: var(--secondary-color); /* Pink text color */
 }
 
-/* Paragraph Styles */
+/* Paragraph Styles: Ensures consistent paragraph styling */
 p {
-    font-family: var(--font-body);
-    font-optical-sizing: auto;
-    font-weight: 400; /* Montserrat regular weight */
-    font-style: normal;
-    font-size: 20px;
+    font-family: var(--font-body); /* Uses Montserrat for paragraphs */
+    font-optical-sizing: auto; /* Ensures optimal font rendering */
+    font-weight: 400; /* Regular weight */
+    font-style: normal; /* Normal font style */
+    font-size: 20px; /* Medium font size */
 }
 
-/* Social Media Icons */
+/* Social Media Icons: Styles for social media icons */
 .socials {
-    margin-top: 5px;
-    margin-right: 5px;
-    float: right;
-    height: 40px;
-    width: 40px;
-    transition: background-color var(--transition-speed) ease;
+    margin-top: 5px; /* Adds space above the icons */
+    margin-right: 5px; /* Adds space to the right of the icons */
+    float: right; /* Floats icons to the right */
+    height: 40px; /* Fixed height */
+    width: 40px; /* Fixed width */
+    transition: background-color var(--transition-speed) ease; /* Smooth hover effect */
 }
 
 .socials:hover {
-    background-color: antiquewhite;
-    padding: 5px;
+    background-color: antiquewhite; /* Changes background color on hover */
+    padding: 5px; /* Adds padding on hover */
 }
 
-/* Responsive Design */
+/* Responsive Design: Adjusts layout for screens smaller than 768px */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column; /* Stacks navbar items vertically */
+        text-align: center; /* Centers text horizontally */
     }
 
     main {
-        padding: 10px;
+        padding: 10px; /* Reduces padding for smaller screens */
     }
 
     .footer-links {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column; /* Stacks footer links vertically */
+        text-align: center; /* Centers text horizontally */
     }
 }

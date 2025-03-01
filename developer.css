@@ -1,76 +1,141 @@
-/* Developer Section */
-.developers {
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 20px;
+/* Carousel Styles */
+
+/* Carousel Container: Sets up the grid layout and centers content */
+#Carousel {
+    background-color: white; /* White background for the carousel */
+    height: 550px; /* Fixed height for the carousel */
+    margin: 0; /* Removes default margin */
+    display: grid; /* Uses CSS Grid for layout */
+    grid-template-rows: 500px 0px; /* Defines rows for slides and controls */
+    grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr; /* Defines columns for slides and navigation buttons */
+    align-items: center; /* Vertically centers content */
+    justify-items: center; /* Horizontally centers content */
 }
 
-/* Container for developer text and grid */
-.developers-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    /* No global text-align here, so we can style paragraphs individually */
+/* Carousel Item Images: Styles for images inside carousel items */
+.item img {
+    width: 250px; /* Fixed width for images */
+    height: 300px; /* Fixed height for images */
+    border-radius: 10px; /* Rounds the corners */
 }
 
-/* Center the H2 if desired */
-.developers-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
+/* Item Name: Styles for the name/title of each carousel item */
+.name {
+    margin-bottom: 2px; /* Adds space below the name */
+    font-family: "Playwrite IT Moderna", cursive; /* Custom font for the name */
+    font-optical-sizing: auto; /* Ensures optimal font rendering */
+    font-weight: 400; /* Normal font weight */
+    font-style: normal; /* Normal font style */
+    font-size: 25px; /* Large font size */
+    text-align: center; /* Centers text horizontally */
 }
 
-/* Intro paragraphs under h2: left-aligned */
-.developers-container > p {
-    text-align: left;
-    margin-bottom: 15px;
-    font-weight: normal;
+/* Item Caption: Styles for the description of each carousel item */
+.caption {
+    font-style: italic; /* Italic text */
+    font-family: "Playwrite IT Moderna", cursive; /* Custom font for the caption */
+    font-optical-sizing: auto; /* Ensures optimal font rendering */
+    font-weight: 400; /* Normal font weight */
+    font-style: normal; /* Normal font style */
+    font-size: 20px; /* Medium font size */
+    text-align: center; /* Centers text horizontally */
+    color: #fcf5e5; /* Light cream text color */
 }
 
-/* Developer Grid */
-.developers-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 20px;
+/* Carousel Slides Container: Holds all carousel items */
+main#carouselSlides {
+    grid-row: 1 / 2; /* Positions the slides in the first row */
+    grid-column: 1 / 8; /* Spans all columns */
+    width: 100vw; /* Full viewport width */
+    height: 500px; /* Fixed height for the slides container */
+    display: flex; /* Uses Flexbox for layout */
+    align-items: center; /* Vertically centers content */
+    justify-content: center; /* Horizontally centers content */
+    overflow: hidden; /* Hides overflow content */
+    transform-style: preserve-3d; /* Enables 3D transformations */
+    perspective: 100%; /* Adds perspective for 3D effects */
+    --items: 5; /* Number of carousel items */
+    --middle: 3; /* Middle item index */
+    --position: 1; /* Current position in the carousel */
+    pointer-events: none; /* Disables pointer events on slides */
 }
 
-/* Each Developer Card: center its contents */
-.developer {
-    text-align: center;
-    border: 1px solid #ddd;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
+/* Carousel Item: Styles for individual carousel items */
+div.item {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1.0); /* Adds a shadow */
+    text-align: center; /* Centers text horizontally */
+    padding: 20px; /* Adds internal padding */
+    border-radius: 10px; /* Rounds the corners */
+    background-color: #ffb2d9; /* Light pink background */
+    position: absolute; /* Positions items absolutely within the container */
+    width: 300px; /* Fixed width for items */
+    height: 455px; /* Fixed height for items */
+    --r: calc(var(--position) - var(--offset)); /* Calculates the relative position */
+    --abs: max(calc(var(--r) * -1), var(--r)); /* Calculates the absolute position */
+    transition: all 0.25s linear; /* Smooth transition for transformations */
+    transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-300px * var(--r))); /* 3D rotation and translation */
+    z-index: calc((var(--position) - var(--abs))); /* Sets the stacking order */
 }
 
-/* Developer name <p> (inside each .developer) is bold */
-.developer > p {
-    font-weight: bold;
+/* Radio Buttons: Styles for carousel navigation buttons */
+input[type="radio"] {
+    accent-color: #ffb2d9; /* Sets the color of the radio buttons */
 }
 
-/* Developer Images */
-.developer img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    object-fit: cover;
+/* Carousel Item Positioning: Sets the offset for each item */
+div.item:nth-of-type(1) {
+    --offset: 1; /* Offset for the first item */
+}
+div.item:nth-of-type(2) {
+    --offset: 2; /* Offset for the second item */
+}
+div.item:nth-of-type(3) {
+    --offset: 3; /* Offset for the third item */
+}
+div.item:nth-of-type(4) {
+    --offset: 4; /* Offset for the fourth item */
+}
+div.item:nth-of-type(5) {
+    --offset: 5; /* Offset for the fifth item */
 }
 
-/* Developer Links */
-.developer a {
-    color: #0077b5;
-    text-decoration: none;
+/* Radio Button Positioning: Places each radio button in the grid */
+input:nth-of-type(1) {
+    grid-column: 2 / 3; /* Positions the first radio button */
+    grid-row: 2 / 3;
+}
+input:nth-of-type(1):checked ~ main#carouselSlides {
+    --position: 1; /* Updates the carousel position when the first radio button is checked */
 }
 
-.developer a:hover {
-    text-decoration: underline;
+input:nth-of-type(2) {
+    grid-column: 3 / 4; /* Positions the second radio button */
+    grid-row: 2 / 3;
+}
+input:nth-of-type(2):checked ~ main#carouselSlides {
+    --position: 2; /* Updates the carousel position when the second radio button is checked */
 }
 
-/* Responsive for smaller screens */
-@media (max-width: 768px) {
-    .developers-grid {
-        grid-template-columns: 1fr;
-    }
+input:nth-of-type(3) {
+    grid-column: 4 /5; /* Positions the third radio button */
+    grid-row: 2 / 3;
+}
+input:nth-of-type(3):checked ~ main#carouselSlides {
+    --position: 3; /* Updates the carousel position when the third radio button is checked */
+}
+
+input:nth-of-type(4) {
+    grid-column: 5 / 6; /* Positions the fourth radio button */
+    grid-row: 2 / 3;
+}
+input:nth-of-type(4):checked ~ main#carouselSlides {
+    --position: 4; /* Updates the carousel position when the fourth radio button is checked */
+}
+
+input:nth-of-type(5) {
+    grid-column: 6 / 7; /* Positions the fifth radio button */
+    grid-row: 2 / 3;
+}
+input:nth-of-type(5):checked ~ main#carouselSlides {
+    --position: 5; /* Updates the carousel position when the fifth radio button is checked */
 }

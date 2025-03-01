@@ -1,66 +1,66 @@
-/* Events Page Container - Flexbox Layout */
+/* Events Page Container: Flexbox layout for the events section */
 .events-container {
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 20px;
-    display: flex;
-    align-items: center;
+    max-width: 1200px; /* Limits the maximum width of the container */
+    margin: 50px auto; /* Centers the container horizontally with top/bottom margin */
+    padding: 20px; /* Adds internal padding */
+    display: flex; /* Uses Flexbox for layout */
+    align-items: center; /* Vertically centers content */
     justify-content: space-between; /* Ensures image stays on the right */
-    gap: 40px;
+    gap: 40px; /* Adds space between text and image */
 }
 
-/* Text Content Styling */
+/* Text Content Styling: Styles for the text section */
 .events-container .text-content {
     flex: 1; /* Takes up remaining space */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stacks text vertically */
     align-items: flex-start; /* Aligns text to the left */
 }
 
-/* Center the h2 element */
+/* Center the h2 heading */
 .events-container .text-content h2 {
-    text-align: center;
-    width: 100%;
+    text-align: center; /* Centers the heading */
+    width: 100%; /* Ensures the heading spans the full width */
 }
 
-/* Left-align the rest of the text */
+/* Left-align paragraphs */
 .events-container .text-content p {
-    text-align: left;
-    width: 100%;
+    text-align: left; /* Aligns text to the left */
+    width: 100%; /* Ensures paragraphs span the full width */
 }
 
-/* Button Styling for Events Page */
+/* Button Styling: Styles for the call-to-action button */
 .events-container .button {
-    margin-top: 20px;
-    align-self: center;
-    display: inline-block;
+    margin-top: 20px; /* Adds space above the button */
+    align-self: center; /* Centers the button horizontally */
+    display: inline-block; /* Ensures the button behaves as a block element */
 }
 
-/* Image Styling */
+/* Image Styling: Styles for the event image */
 .events-container .event-image {
-    flex: 0 0 400px; /* Keeps image at a fixed size */
-    max-width: 400px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    align-self: center; /* Ensures proper alignment */
+    flex: 0 0 400px; /* Keeps the image at a fixed size */
+    max-width: 400px; /* Limits the image width */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px; /* Rounds the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    align-self: center; /* Ensures proper vertical alignment */
 }
 
-/* Only change links inside paragraphs to primary color, then secondary on hover */
+/* Link Styling: Styles for links within paragraphs */
 .events-container .text-content p a {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Uses the primary color for links */
 }
 
 .events-container .text-content p a:hover {
-    color: var(--secondary-color);
+    color: var(--secondary-color); /* Changes link color on hover */
 }
 
-/* Responsive Design */
+/* Responsive Design: Adjusts layout for screens smaller than 768px */
 @media (max-width: 768px) {
     .events-container {
-        flex-direction: column; /* Stacks content for mobile */
-        text-align: center;
-        gap: 20px;
+        flex-direction: column; /* Stacks text and image vertically */
+        text-align: center; /* Centers text for mobile */
+        gap: 20px; /* Reduces space between stacked elements */
     }
 
     .events-container .text-content {
@@ -68,6 +68,6 @@
     }
 
     .events-container .event-image {
-        max-width: 100%;
+        max-width: 100%; /* Makes the image responsive to the container */
     }
 }

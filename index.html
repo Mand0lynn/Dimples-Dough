@@ -6,55 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dimples & Dough</title>
 
-    <!-- Global Styles -->
+    <!-- Global Styles: Applies site-wide styles -->
     <link rel="stylesheet" href="main.css">
+    <!-- Page-Specific Styles: Specific styles for the home page -->
     <link rel="stylesheet" href="home.css">
 </head>
 
 <body class="home-page">
 
-    <!-- Header (Dynamically Loaded) -->
+    <!-- Header (Dynamically Loaded): Header content will be inserted here -->
     <div id="header"></div>
 
+    <!-- Slideshow Section: Displays a rotating banner of images -->
     <section class="TopImage">
-    <div class="slideshow-container">
-        <div class="slide">
-            <img src="images/Banner_Pie2.svg" alt="Pie">
+        <div class="slideshow-container">
+            <!-- Slide 1: Pie -->
+            <div class="slide">
+                <img src="images/Banner_Pie2.svg" alt="Pie">
+            </div>
+            <!-- Slide 2: Bread -->
+            <div class="slide">
+                <img src="images/Banner_Bread2.svg" alt="Bread">
+            </div>
+            <!-- Slide 3: Carrot Cake -->
+            <div class="slide">
+                <img src="images/Banner_CarrotCake2.svg" alt="Carrot Cake">
+            </div>
+            <!-- Slide 4: Candy Chocolate Cake -->
+            <div class="slide">
+                <img src="images/Banner_CandyChocCake2.svg" alt="Candy Chocolate Cake">
+            </div>
+            <!-- Slide 5: Chocolate Graham Pie -->
+            <div class="slide">
+                <img src="images/Banner_ChocGrahamPie2.svg" alt="Chocolate Graham Pie">
+            </div>
+
+            <!-- Dark Overlay: Adds a semi-transparent layer over the slideshow -->
+            <div class="overlay"></div>
+
+            <!-- Motto: Displays a centered message over the slideshow -->
+            <div class="motto">Spreading love & happiness with baked goods</div>
+
+            <!-- Navigation Arrows: Allows users to navigate between slides -->
+            <button class="prev" onclick="prevSlide()">&#10094;</button> <!-- Previous arrow -->
+            <button class="next" onclick="nextSlide()">&#10095;</button> <!-- Next arrow -->
+
+            <!-- Play/Pause Button: Allows users to pause or resume the slideshow -->
+            <button class="play-pause" onclick="toggleSlideshow()">
+                <span id="playPauseIcon">⏸</span> <!-- Play/pause icon -->
+            </button>
         </div>
-        <div class="slide">
-            <img src="images/Banner_Bread2.svg" alt="Bread">
-        </div>
-        <div class="slide">
-            <img src="images/Banner_CarrotCake2.svg" alt="Candy Chocolate Cake">
-        </div>
-        <div class="slide">
-            <img src="images/Banner_CandyChocCake2.svg" alt="Candy Chocolate Cake">
-        </div>
-        <div class="slide">
-            <img src="images/Banner_ChocGrahamPie2.svg" alt="Pie">
-        </div>
-    
+    </section>
 
-        <!-- Dark Overlay -->
-        <div class="overlay"></div>
-
-        <!-- Message Over the Image -->
-        <div class="motto">Spreading love & happiness with baked goods</div>
-
-        <!-- Navigation Arrows -->
-        <button class="prev" onclick="prevSlide()">&#10094;</button>
-        <button class="next" onclick="nextSlide()">&#10095;</button>
-
-        <!-- Play/Pause Button -->
-        <button class="play-pause" onclick="toggleSlideshow()">
-            <span id="playPauseIcon">⏸</span>
-        </button>
-    </div>
-</section>
-
-
-
-    <!-- Welcome Message -->
+    <!-- Welcome Message: Introduces the brand and invites users to explore -->
     <section class="welcome-message">
         <div class="welcome-container"> 
             <h2 class="message">Small-batches, big heart</h2>
@@ -69,22 +73,24 @@
             </p>
             <p><em>Have a custom request?</em></p>
             <br><br>
+            <!-- Call-to-Action Button: Links to the contact form -->
             <div class="button-container">
-            <a href="menu.html#contact" class="button">Let's Create Something!</a>
-
+                <a href="menu.html#contact" class="button">Let's Create Something!</a>
+            </div>
         </div>
     </section>
 
+    <!-- Horizontal Divider: Matches the style of other pages -->
     <hr class="divider">
 
-    <!-- Carousel (Dynamically Loaded) -->
+    <!-- Carousel (Dynamically Loaded): Embedded carousel for showcasing content -->
     <iframe src="carousel/GoodCarousel" width="100%" height="500px" scrolling="no" seamless="seamless" style="border:none;">
     </iframe> 
 
-    <!-- Footer (Dynamically Loaded) -->
+    <!-- Footer (Dynamically Loaded): Footer content will be inserted here -->
     <div id="footer"></div>
 
-    <!-- JavaScript for dynamic loading -->
+    <!-- JavaScript: Loads dynamic content (e.g., header, footer, slideshow) -->
     <script src="scripts.js"></script>
 
 </body>
