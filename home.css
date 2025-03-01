@@ -121,6 +121,7 @@
   
   /* Change icon color to pink (your primary color variable) */
   color: var(--primary-color);
+}
 
 /* First Slide: Ensures the first slide is visible initially */
 .slide:first-child {
