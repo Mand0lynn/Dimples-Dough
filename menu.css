@@ -75,25 +75,38 @@
   padding: 20px;
 }
 
-/* Make the image smaller by removing the fixed flex width 
-   and just using max-width. */
+#contact {
+  display: flex;
+  align-items: stretch; /* Both image & form stretch to same height */
+  gap: 40px;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+/* Let the image and form each take half the container (adjust as desired) */
 .contact-image {
-  max-width: 300px;  /* or 250px, etc. */
-  width: 100%;       /* ensures responsiveness if the screen is < 300px wide */
-  height: auto;      
+  flex: 1;             /* or flex: 0 0 50% if you want exactly half */
+  width: 100%;         /* ensures it fills its flex area horizontally */
+  height: 100%;        /* ensures it fills the container’s height */
+  object-fit: cover;   /* image will fill the box, cropping if needed */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* The form takes the remaining space */
+/* The form also fills the container height */
 .contact-form {
-  flex: 1;
+  flex: 1;             /* same flex so it’s the same width/height as image */
+  display: flex;       /* optional if you want to vertically center form content */
+  flex-direction: column;
+  justify-content: center; /* center content vertically if you like */
   text-align: left;
 }
 
 .contact-form h2 {
   text-align: center;
 }
+
 
 /* Form Fields */
 .contact-form form {

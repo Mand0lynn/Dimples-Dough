@@ -24,7 +24,6 @@
 /* Center the logo + nav in a separate section */
 .header-logo-section {
   text-align: center;
-  margin: 20px auto 0 auto; /* 20px top margin */
 }
 
 /* Make the link only as wide as the image */
@@ -38,7 +37,8 @@
   display: block;
   width: 250px;
   height: auto;
-  margin: 0 auto 25px; /* bottom spacing */
+  margin-top: 50px;
+  margin-bottom: 25px; /* bottom spacing */
 }
 
 /* Nav Bar Centered */
