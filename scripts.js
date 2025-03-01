@@ -1,140 +1,60 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // LOAD HEADER & FOOTER
-
+document.addEventListener("DOMContentLoaded", () => {
+  // Load header
   fetch("header.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("header").innerHTML = data;
-    })
-    .catch(error => console.error("Error loading header:", error));
+    .then(res => res.text())
+    .then(data => { document.getElementById("header").innerHTML = data; })
+    .catch(err => console.error("Error loading header:", err));
 
+  // Load footer
   fetch("footer.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("footer").innerHTML = data;
-    })
-    .catch(error => console.error("Error loading footer:", error));
+    .then(res => res.text())
+    .then(data => { document.getElementById("footer").innerHTML = data; })
+    .catch(err => console.error("Error loading footer:", err));
 
-  
-  //LOAD & INSERT THE CAROUSEL HTML
-   
-  fetch("carousel.html")
-    .then(response => response.text())
-    .then(html => {
-      // Insert carousel markup into an element with ID "carouselSection"
-      // (Make sure your main page has <div id="carouselSection"></div>)
-      document.getElementById("carouselSection").innerHTML = html;
-
-      // Once the carousel HTML is in place, initialize carousel logic
-      initCarousel();
-    })
-    .catch(error => console.error("Error loading carousel:", error));
-
-    //TOP SLIDESHOW LOGIC
-   
-  let slideIndex = 0;
-  let slides = document.querySelectorAll(".slide");
-  let isPaused = false;
-  let interval;
-
-  // Start the slideshow
-  showSlides(false); // Show the first slide
-  startSlideshow();  // Begin auto-rotation
-
-  // Show/hide slides
-  function showSlides(next = true) {
-    // Hide all slides
-    slides.forEach(slide => (slide.style.opacity = "0"));
-
-    // Move index forward or backward
-    if (next) {
-      slideIndex = (slideIndex + 1) % slides.length;
-    } else {
-      slideIndex = (slideIndex - 1 + slides.length) % slides.length;
-    }
-
-    // Show the current slide
-    slides[slideIndex].style.opacity = "1";
+  // Load carousel if #carousel exists
+  if (document.getElementById("carousel")) {
+    fetch("carousel.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("carousel").innerHTML = html;
+        initCarousel();
+      })
+      .catch(err => console.error("Error loading carousel:", err));
   }
 
-  // Auto-rotate every 8 seconds
-  function startSlideshow() {
-    interval = setInterval(() => showSlides(true), 6000);
+  // Page-specific logic (optional)
+  if (document.body.classList.contains("menu-page")) {
+    // Menu scripts here
+  }
+  if (document.body.classList.contains("events-page")) {
+    // Events scripts here
+  }
+  if (document.body.classList.contains("about-page")) {
+    // About scripts here
   }
 
-  // If user clicks Prev
-  function prevSlide() {
-    showSlides(false);
-    restartSlideshow();
-  }
-
-  // If user clicks Next
-  function nextSlide() {
-    showSlides(true);
-    restartSlideshow();
-  }
-
-  // Restart the timer if not paused
-  function restartSlideshow() {
-    if (!isPaused) {
-      clearInterval(interval);
-      startSlideshow();
-    }
-  }
-
-  // Play/Pause toggle
-  function toggleSlideshow() {
-    let playPauseIcon = document.getElementById("playPauseIcon");
-    if (isPaused) {
-      // Resume
-      startSlideshow();
-      playPauseIcon.innerHTML = "⏸";
-    } else {
-      // Pause
-      clearInterval(interval);
-      playPauseIcon.innerHTML = "▶";
-    }
-    isPaused = !isPaused;
-  }
-
-  // Expose slideshow functions to the global scope (so HTML buttons work)
-  window.prevSlide = prevSlide;
-  window.nextSlide = nextSlide;
-  window.toggleSlideshow = toggleSlideshow;
-
-  //CAROUSEL LOGIC (INITIALIZED AFTER HTML IS LOADED)
-  
+  // Carousel logic (looping)
   function initCarousel() {
-    // We'll look up the newly inserted .carousel-item elements
+    const items = document.querySelectorAll(".carousel-item");
+    const total = items.length;
     let currentIndex = 0;
-    const carouselItems = document.querySelectorAll(".carousel-item");
-    const totalItems = carouselItems.length;
 
-    // If you want multiple items visible at once, adjust this:
-    const itemsToShow = 3;
-
-    // Shift items left/right based on currentIndex
+    // Shift items based on currentIndex
     function updateCarousel() {
-      const offset = currentIndex * 100; // basic approach: 100% per "shift"
-      carouselItems.forEach(item => {
+      const offset = currentIndex * 100;
+      items.forEach(item => {
         item.style.transform = `translateX(-${offset}%)`;
       });
     }
 
-    // Move slide left/right by 1
-    window.moveSlide = function (n) {
+    // Move slides left/right, wrapping around
+    window.moveSlide = function(n) {
       currentIndex += n;
-
-      // Keep within bounds
-      if (currentIndex < 0) {
-        currentIndex = totalItems - itemsToShow;
-      } else if (currentIndex > totalItems - itemsToShow) {
-        currentIndex = 0;
-      }
+      currentIndex = (currentIndex + total) % total;
       updateCarousel();
     };
 
-    // Initialize
+    // Initial position
     updateCarousel();
   }
 });
