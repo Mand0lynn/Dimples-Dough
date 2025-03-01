@@ -1,127 +1,63 @@
-/* Outer Carousel Container */
-.carousel {
-    background-color: white;
-    height: 550px; /* Enough space for the 3D effect */
-    margin: 0;
-    display: grid;
-    /* 500px row for the items, 0px row for the radio "dots" area */
-    grid-template-rows: 500px 0px;
-    /* 1fr on sides, 30px columns for each radio button, total 5 buttons, plus 1fr */
-    grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr; 
-    align-items: center;
-    justify-items: center;
-}
-
-/* The 3D Carousel container that holds .item elements */
-main#carouselSlides {
-    grid-row: 1 / 2;
-    grid-column: 1 / 8;
-    width: 100vw;
-    height: 500px;
+/* Developer Page - Background Section */
+.developers-section {
+    background: url("../images/DeveloperBackground.jpg") center/cover no-repeat;
+    padding: 50px 0; /* reduced from 100px */
     display: flex;
-    align-items: center;
     justify-content: center;
-    overflow: hidden;
-    transform-style: preserve-3d;
-    perspective: 100%;
-    --items: 5;
-    --middle: 3;
-    --position: 3; /* default to the 3rd item if you prefer */
-    pointer-events: none; /* only radio inputs are clickable */
+    align-items: center;
 }
 
-/* Each Card (Item) */
-div.item {
-    position: absolute;
-    width: 300px;          /* enough for a 250×300 image plus text/padding */
-    height: 455px;         /* fits image + name + caption + padding */
-    background-color: #ffb2d9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 1.0);
+/* Developers Container */
+.developers-container {
+    max-width: 1000px;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: left; /* override the global main { text-align: center; } */
+    background-color: rgba(255, 255, 255, 0.85); /* optional semi-transparent white */
+    margin: 0 20px; /* optional side margin */
+}
+
+/* Developer Section Grid */
+.developers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    margin: 30px auto 0;
+    padding: 20px;
+}
+
+/* Individual Developer Box */
+.developer {
     text-align: center;
+    border: 1px solid #ddd;
     padding: 20px;
     border-radius: 10px;
-    --r: calc(var(--position) - var(--offset));
-    --abs: max(calc(var(--r) * -1), var(--r));
-    transition: all 0.25s linear;
-    transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-300px * var(--r)));
-    z-index: calc((var(--position) - var(--abs)));
+    background-color: #f9f9f9;
 }
 
-/* Fix offsets for each item so the 3D transform fans them out */
-div.item:nth-of-type(1) { --offset: 1; }
-div.item:nth-of-type(2) { --offset: 2; }
-div.item:nth-of-type(3) { --offset: 3; }
-div.item:nth-of-type(4) { --offset: 4; }
-div.item:nth-of-type(5) { --offset: 5; }
-
-/* Images: 250×300 to keep them uniform */
-.item img {
-    width: 250px;
-    height: 300px;
-    border-radius: 10px;
+/* Developer Images */
+.developer img {
+    width: 100px !important;
+    height: 100px !important;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover; /* Ensures the image is cropped instead of squashed */
 }
 
-/* Title (Name) */
-.name {
-    margin-bottom: 2px;
-    font-family: "Playwrite IT Moderna", cursive;
-    font-weight: 400;
-    font-size: 25px;
-    text-align: center;
+/* Developer Links */
+.developer a {
+    color: #0077b5;
+    text-decoration: none;
 }
 
-/* Caption (italic text) */
-.caption {
-    font-style: italic;
-    font-family: "Playwrite IT Moderna", cursive;
-    font-weight: 400;
-    font-size: 20px;
-    text-align: center;
-    color: #fcf5e5;
+.developer a:hover {
+    text-decoration: underline;
 }
 
-/* Radio Buttons (the "dots") for navigation */
-input[type="radio"] {
-    accent-color: #ffb2d9;
-}
-
-/* Position the 5 radio buttons in the bottom row */
-input:nth-of-type(1) {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-}
-input:nth-of-type(1):checked ~ main#carouselSlides {
-    --position: 1;
-}
-
-input:nth-of-type(2) {
-    grid-column: 3 / 4;
-    grid-row: 2 / 3;
-}
-input:nth-of-type(2):checked ~ main#carouselSlides {
-    --position: 2;
-}
-
-input:nth-of-type(3) {
-    grid-column: 4 / 5;
-    grid-row: 2 / 3;
-}
-input:nth-of-type(3):checked ~ main#carouselSlides {
-    --position: 3;
-}
-
-input:nth-of-type(4) {
-    grid-column: 5 / 6;
-    grid-row: 2 / 3;
-}
-input:nth-of-type(4):checked ~ main#carouselSlides {
-    --position: 4;
-}
-
-input:nth-of-type(5) {
-    grid-column: 6 / 7;
-    grid-row: 2 / 3;
-}
-input:nth-of-type(5):checked ~ main#carouselSlides {
-    --position: 5;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .developers-grid {
+        grid-template-columns: 1fr;
+    }
 }
