@@ -22,6 +22,21 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch(err => console.error("Error loading carousel:", err));
   }
 
+  // If the page has a contact form, set up submission logic
+  const contactForm = document.getElementById("contactForm");
+  const formMessage = document.getElementById("form-message");
+  if (contactForm && formMessage) {
+    // Hide the thank-you message initially (CSS also does this, but just in case)
+    formMessage.style.display = "none";
+
+    // On form submit, prevent reload, show message, clear fields
+    contactForm.addEventListener("submit", e => {
+      e.preventDefault();
+      formMessage.style.display = "block";
+      contactForm.reset();
+    });
+  }
+
   // Page-specific logic (optional)
   if (document.body.classList.contains("menu-page")) {
     // Menu scripts here
@@ -39,7 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const total = items.length;
     let currentIndex = 0;
 
-    // Shift items based on currentIndex
     function updateCarousel() {
       const offset = currentIndex * 100;
       items.forEach(item => {
@@ -47,14 +61,12 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    // Move slides left/right, wrapping around
     window.moveSlide = function(n) {
       currentIndex += n;
       currentIndex = (currentIndex + total) % total;
       updateCarousel();
     };
 
-    // Initial position
     updateCarousel();
   }
 });

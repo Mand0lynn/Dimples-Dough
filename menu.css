@@ -10,7 +10,6 @@
     /* We handle text alignment in child elements */
 }
 
-/* Keep the headings centered, but paragraphs left-aligned */
 .menu-intro h2 {
     text-align: center;
 }
@@ -38,7 +37,6 @@
     padding: 20px;
 }
 
-/* Headings centered, paragraphs left-aligned */
 .menu-layout h2 {
     text-align: center;
 }
@@ -55,50 +53,63 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Contact Section Layout */
+/* Contact Section: flex container */
 #contact {
-    /* Turn the contact section into a flex container */
     display: flex;
     align-items: center;
     gap: 40px;
     max-width: 1200px;
-    margin: 50px auto; /* Similar spacing as other sections */
+    margin: 50px auto;
     padding: 20px;
 }
 
-/* Contact Image on the left */
+/* Larger image (left) */
 .contact-image {
-    width: 50%;         /* or 40%, adjust as desired */
-    max-width: 400px;
+    flex: 2; /* bigger portion */
+    max-width: 600px; /* optional cap */
     border-radius: var(--border-radius);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 0;          /* remove auto margin */
     display: block;
 }
 
-/* Contact Form on the right, left-aligned text */
+/* Smaller form (right) */
 .contact-form {
-    flex: 1;            /* takes remaining space */
-    text-align: left;   /* ensure paragraphs/labels are left-aligned */
+    flex: 1; /* smaller portion */
+    text-align: left;
 }
 
-/* Center just the contact heading if desired */
+/* Center the contact heading if desired */
 .contact-form h2 {
-    text-align: center; 
+    text-align: center;
 }
 
-/* Remove extra space between email & message boxes */
+/* Uniform input boxes, same font as body */
+.contact-form form input[type="email"],
+.contact-form form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: var(--font-body); /* ensure body font */
+    font-size: 16px; /* match your body text size */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Add consistent spacing between fields */
 .contact-form form {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* consistent spacing between form fields */
+    gap: 10px;
 }
 
-.contact-form form input[type="email"],
-.contact-form form textarea {
-    margin: 0;             /* remove default margins */
-    width: 100%;
-    box-sizing: border-box;
+/* Initially hide the thank-you message */
+#form-message {
+    display: none;
+    font-style: italic;
+    color: green; /* or another color */
+    text-align: center;
+    margin-top: 10px;
 }
 
 /* Responsive Design */
