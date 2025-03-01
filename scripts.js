@@ -57,4 +57,27 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     showSlides(); // Start the slideshow
+
+    // Carousel Logic
+    let carouselIndex = 0;
+    const carouselItems = document.querySelectorAll(".carousel-item");
+    const totalItems = carouselItems.length;
+    const visibleItems = 3; // Display three images at a time
+
+    function moveCarousel(direction) {
+        carouselIndex += direction;
+
+        if (carouselIndex < 0) {
+            carouselIndex = 0; // Prevent moving before first item
+        } else if (carouselIndex > totalItems - visibleItems) {
+            carouselIndex = totalItems - visibleItems; // Prevent moving past last set
+        }
+
+        const offset = -(carouselIndex * 100 / visibleItems);
+        document.querySelector(".carousel-wrapper").style.transform = `translateX(${offset}%)`;
+    }
+
+    // Attach event listeners to carousel arrows
+    document.querySelector(".carousel-arrow.prev").addEventListener("click", () => moveCarousel(-1));
+    document.querySelector(".carousel-arrow.next").addEventListener("click", () => moveCarousel(1));
 });
