@@ -55,6 +55,47 @@
     z-index: 2;
 }
 
+/* Navigation Arrows */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Play/Pause Button */
+.play-pause {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 18px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 3;
+    border-radius: 50%;
+}
+
+.play-pause:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 /* First Slide is Visible Initially */
 .slide:first-child {
     opacity: 1;
