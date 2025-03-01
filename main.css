@@ -87,6 +87,15 @@ button:hover,
     border: 2px solid var(--secondary-color); /* Pink border on hover */
 }
 
+.button-container {
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically if container has a set height */
+  width: 100%;
+  /* optional: text-align: center; if you prefer inline-block centering */
+}
+
+
 /* Global Dividers: Adds a decorative divider between sections */
 .divider {
     width: 80%; /* Sets the width of the divider */
