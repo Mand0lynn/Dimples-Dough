@@ -34,11 +34,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const slides = document.querySelectorAll(".slide");
 
     function showSlides() {
-        slides.forEach(slide => slide.style.display = "none");
-        slideIndex = (slideIndex + 1) % slides.length;
-        slides[slideIndex].style.display = "block";
-        setTimeout(showSlides, 4000); // Change image every 4 seconds
+        slides.forEach(slide => slide.style.opacity = "0"); // Hide all slides
+        slideIndex = (slideIndex + 1) % slides.length; // Move to next slide
+        slides[slideIndex].style.opacity = "1"; // Show current slide
+        setTimeout(showSlides, 4000); // Change every 4 seconds
     }
 
-    showSlides();
+    showSlides(); // Start slideshow
 });
