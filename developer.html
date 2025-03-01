@@ -1,63 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dimples & Dough | Website Developers</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dimples & Dough | Website Developers</title>
 
-    <!-- Load Global Styles First -->
-    <link rel="stylesheet" href="main.css">
-
-    <!-- Page-Specific Styles -->
-    <link rel="stylesheet" href="developer.css">
+  <!-- Global Styles First -->
+  <link rel="stylesheet" href="main.css">
+  <!-- Developer-Specific Styles After -->
+  <link rel="stylesheet" href="developer.css">
 </head>
 <body>
-    <!-- Header (Dynamically Loaded) -->
-    <div id="header"></div>
+  <!-- Header (Dynamically Loaded) -->
+  <div id="header"></div>
 
-    <!-- Main Content -->
-    <main>
+  <main>
+    <!-- Developer Section -->
+    <section class="developers-section">
+      <div class="developers-container">
         <h2>Website Developers</h2>
-        <p class="devP">This website was handcrafted with care—just like the delicious treats at Dimples & Dough!</p>
-        <p class="devP">Built as part of a web development course at the University of Washington Tacoma, this project showcases the work of four dedicated IT majors who combined their technical skills and creativity to bring this site to life.</p>
-        <p class="devP">Each developer contributed their expertise in design, coding, project management, and user experience to create a seamless and visually appealing space for Dimples & Dough.</p>
-        <p class="devP">Check out the team below and connect with them on LinkedIn.</p>
+        <p>This website was handcrafted with care—just like the delicious treats at Dimples & Dough!</p>
+        <p>Built as part of a web development course at the University of Washington Tacoma, this project showcases the work of four dedicated IT majors who combined their technical skills and creativity to bring this site to life.</p>
+        <p>Each developer contributed their expertise in design, coding, project management, and user experience to create a seamless and visually appealing space for Dimples & Dough.</p>
+        <p>Check out the team below and connect with them on LinkedIn.</p>
 
+        <!-- Developer Grid -->
         <div class="developers-grid">
-            <!-- Developer 1 -->
-            <div class="developer">
-                <img src="images/Christopher.jpg" alt="Christopher Bess">
-                <h2>Christopher Bess</h2>
-                <a href="http://www.linkedin.com/in/christopher-bess-618657269/">LinkedIn</a>
-            </div>
-
-            <!-- Developer 2 -->
-            <div class="developer">
-                <img src="images/DaveJenks.jpeg" alt="Dave Jenks">
-                <h2>Dave Jenks</h2>
-                <a href="https://www.linkedin.com/in/david-jenks">LinkedIn</a>
-            </div>
-
-            <!-- Developer 3 -->
-            <div class="developer">
-                <img src="images/Diyahnara.jpg" alt="Diyahnara Lockhart">
-                <h2>Diyahnara Lockhart</h2>
-                <a href="http://www.linkedin.com/in/diyahnara-lockhart-b612b3192">LinkedIn</a>
-            </div>
-
-            <!-- Developer 4 -->
-            <div class="developer">
-                <img src="images/Amanda.jpg" alt="Amanda Wartick">
-                <h2>Amanda Wartick</h2>
-                <a href="https://www.linkedin.com/in/amandawari">LinkedIn</a>
-            </div>
+          <div class="developer">
+            <img src="images/Christopher.jpg" alt="Christopher Bess">
+            <h2>Christopher Bess</h2>
+            <a href="http://www.linkedin.com/in/christopher-bess-618657269/">LinkedIn</a>
+          </div>
+          <div class="developer">
+            <img src="images/DaveJenks.jpeg" alt="Dave Jenks">
+            <h2>Dave Jenks</h2>
+            <a href="https://www.linkedin.com/in/david-jenks">LinkedIn</a>
+          </div>
+          <div class="developer">
+            <img src="images/Diyahnara.jpg" alt="Diyahnara Lockhart">
+            <h2>Diyahnara Lockhart</h2>
+            <a href="http://www.linkedin.com/in/diyahnara-lockhart-b612b3192">LinkedIn</a>
+          </div>
+          <div class="developer">
+            <img src="images/Amanda.jpg" alt="Amanda Wartick">
+            <h2>Amanda Wartick</h2>
+            <a href="https://www.linkedin.com/in/amandawari">LinkedIn</a>
+          </div>
         </div>
-    </main>
+      </div>
+    </section>
 
-    <!-- Footer (Dynamically Loaded) -->
-    <div id="footer"></div>
+    <hr class="divider"><!-- Optional divider, if you want consistency -->
+  </main>
 
-    <!-- JavaScript for dynamic loading -->
-    <script src="scripts.js"></script>
+  <!-- Footer (Dynamically Loaded) -->
+  <div id="footer"></div>
+
+  <!-- JavaScript for dynamic loading -->
+  <script src="scripts.js"></script>
 </body>
 </html>

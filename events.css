@@ -46,13 +46,13 @@
     align-self: center; /* Ensures proper alignment */
 }
 
-/* Make event-page links use secondary color, then primary color on hover */
-.events a {
-    color: var(--secondary-color);
+/* Only change links inside paragraphs to primary color, then secondary on hover */
+.events-container .text-content p a {
+    color: var(--primary-color);
 }
 
-.events a:hover {
-    color: var(--primary-color);
+.events-container .text-content p a:hover {
+    color: var(--secondary-color);
 }
 
 /* Responsive Design */
