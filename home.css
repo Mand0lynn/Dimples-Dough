@@ -102,7 +102,7 @@
     bottom: 15px; /* Positions button at the bottom */
     left: 50%;
     transform: translateX(-50%); /* Centers horizontally */
-    background-color: rgba(0, 0, 0, 0, 40%); /* Button background color */
+    background-color: transparent; /* Button background color */
     color: white; /* Button text color */
     font-size: 18px; /* Button text size */
     border: none; /* No border */
@@ -115,8 +115,12 @@
 
 /* Play/Pause Button Hover: Changes background color on hover */
 .play-pause:hover {
-    background-color: rgba(0, 0, 0, 0, 40%); /* Button background color */
-}
+  /* Keep background transparent on hover */
+  background-color: transparent;
+  border: none;
+  
+  /* Change icon color to pink (your primary color variable) */
+  color: var(--primary-color);
 
 /* First Slide: Ensures the first slide is visible initially */
 .slide:first-child {
