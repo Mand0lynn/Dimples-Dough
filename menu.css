@@ -68,18 +68,19 @@
 /* Contact Section (Image + Form) */
 #contact {
   display: flex;
-  align-items: center; /* Centers the image & form vertically */
+  align-items: center; /* centers image & form vertically */
   gap: 40px;
   max-width: 1200px;
   margin: 50px auto;
   padding: 20px;
 }
 
-/* Let the image be a fixed or max width, not forced to fill container height */
+/* Make the image smaller by removing the fixed flex width 
+   and just using max-width. */
 .contact-image {
-  flex: 0 0 400px; /* or any fixed width you prefer, e.g. 300px */
-  max-width: 100%; /* ensures it shrinks if screen is smaller than 400px */
-  height: auto;    /* maintains natural aspect ratio */
+  max-width: 300px;  /* or 250px, etc. */
+  width: 100%;       /* ensures responsiveness if the screen is < 300px wide */
+  height: auto;      
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -130,7 +131,7 @@
   }
 
   .contact-image {
-    width: 90%; 
+    max-width: 90%; 
     margin-bottom: 20px;
   }
 
