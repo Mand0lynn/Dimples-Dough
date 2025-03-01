@@ -20,7 +20,8 @@
 
 /* Ensure paragraphs are left-aligned */
 .developers-container p {
-    text-align: left;
+    text-align: center;
+    text-style: bold;
     margin-bottom: 15px; /* spacing between paragraphs */
 }
 

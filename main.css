@@ -1,3 +1,6 @@
+/* 1) Import Montserrat (weight 400) and Playwrite IT Moderna (weights 100–400) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Playwrite+IT+Moderna:wght@100..400&display=swap');
+
 /* Global CSS for Dimples & Dough */
 
 /* CSS Variables for Consistency */
@@ -5,9 +8,9 @@
     --primary-color: #ffb2d9; /* Main pink color */
     --secondary-color: #ff69b4; /* Secondary pink color */
     --text-color: black; /* Default text color */
-    --font-primary: "Playwrite IT Moderna", cursive; /* Primary font for headings */
-    --font-secondary: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Secondary font for body text */
-    --font-body: 'Montserrat', sans-serif; /* Default body font */
+    --font-primary: "Playwrite IT Moderna", cursive; /* For headings/buttons */
+    --font-secondary: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    --font-body: 'Montserrat', sans-serif; /* For body text */
     --border-radius: 10px; /* Default border radius for buttons, images, etc. */
     --transition-speed: 0.3s; /* Default transition speed for hover effects */
 }
@@ -49,8 +52,8 @@ a:hover {
 /* Global Buttons */
 .button-container {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Align vertically (if needed) */
+    justify-content: center;
+    align-items: center;
     width: 100%;
     text-align: center;
 }
@@ -64,12 +67,13 @@ button,
     background: var(--primary-color);
     color: var(--text-color);
     cursor: pointer;
-    transition: background var(--transition-speed) ease-in-out, color var(--transition-speed) ease-in-out;
+    transition: background var(--transition-speed) ease-in-out,
+                color var(--transition-speed) ease-in-out;
     text-align: center;
     border-radius: var(--border-radius);
     font-family: var(--font-primary);
     font-weight: normal;
-    margin: 10px auto; /* Centers buttons */
+    margin: 10px auto; 
 }
 
 button:hover,
@@ -95,7 +99,7 @@ main {
 /* Section Headers */
 h1, h2, h3 {
     font-family: var(--font-body);
-    color: var(--secondary-color); /* Updated to use secondary color */
+    color: var(--secondary-color);
 }
 
 h2 {
@@ -105,15 +109,15 @@ h2 {
     font-style: normal;
     font-size: 35px;
     text-align: center;
-    margin-bottom: 20px; /* add space below the h2 */
-    color: var(--secondary-color); /* Ensure h2 uses secondary color */
+    margin-bottom: 20px;
+    color: var(--secondary-color);
 }
 
 /* Paragraph Styles */
 p {
     font-family: var(--font-body);
     font-optical-sizing: auto;
-    font-weight: 200;
+    font-weight: 400; /* Montserrat regular weight */
     font-style: normal;
     font-size: 20px;
 }
@@ -149,5 +153,3 @@ p {
         text-align: center;
     }
 }
-
-

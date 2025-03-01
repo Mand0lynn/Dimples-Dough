@@ -23,20 +23,25 @@
     padding: 5px;
 }
 
-.logo-link {
-    display: inline-block; /* so it only wraps the image, not the entire row */
-    text-align: center;    /* optional, if you want the link center-aligned */
+.header-logo-section {
+  text-align: center;
+  margin: 0 auto;
 }
 
-/* Keep or adjust your existing .logo rules as needed */
-.logo {
-    display: block;  /* ensures the anchor expands to image size vertically */
-    margin: 0 auto;
-    height: 250px;
-    width: 250px;
-    margin-bottom: 25px;
-    margin-top: 50px;
+/* The link itself can be inline-block so it only wraps the image */
+.logo-link {
+  display: inline-block;
+  margin: 0 auto; /* ensures horizontal centering */
 }
+
+/* The logo image is sized as you like */
+.logo {
+  display: block; 
+  width: 250px;  /* or your desired size */
+  height: auto;  /* maintain aspect ratio */
+  margin: 0 auto 25px; /* center within the link, add bottom spacing */
+}
+
 
 
 .navbar {
