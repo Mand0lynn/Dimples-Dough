@@ -46,8 +46,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-family: var(--font-body);
     color: white;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
     text-align: center;
     z-index: 2;
@@ -58,6 +59,49 @@
     opacity: 1;
 }
 
+/* Welcome Section - Ensures It Stays Centered */
+.welcome-container {
+    max-width: 800px;
+    margin: 50px auto; /* Centers content horizontally */
+    padding: 20px;
+    text-align: center;
+}
+
+.welcome-container p {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 750px;
+}
+
+/* Global Section Divider */
+.divider {
+    width: 80%;
+    margin: 50px auto;
+    border: 1px solid #ff69b4;
+}
+
+/* Call-to-Action Button */
+.button {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border: 2px solid #ff69b4;
+    background: #ffb2d9;
+    color: black;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    text-align: center;
+    border-radius: 10px;
+    font-family: "Playwrite IT Moderna", cursive;
+    font-weight: normal;
+}
+
+.button:hover {
+    background: #ff69b4;
+    color: white;
+    border: 2px solid #ff69b4;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .TopImage {
@@ -66,5 +110,9 @@
 
     .motto {
         font-size: 24px;
+    }
+
+    .welcome-container {
+        padding: 15px;
     }
 }
