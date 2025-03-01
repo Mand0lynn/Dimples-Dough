@@ -9,6 +9,12 @@
     padding: 20px;
 }
 
+/* Intro text area: fill remaining space, left-aligned */
+.menu-text {
+    flex: 1;
+    text-align: left;
+}
+
 .menu-intro h2 {
     text-align: center;
 }
@@ -41,6 +47,12 @@
 }
 
 .menu-layout p {
+    text-align: left;
+}
+
+/* Section text area */
+.menu-items {
+    flex: 1;
     text-align: left;
 }
 
