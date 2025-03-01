@@ -28,15 +28,16 @@
 }
 
 .caption {
-    font-style: italic;
-    font-family: "Playwrite IT Moderna", cursive;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
-    text-align: center;
-    color: #fcf5e5;
+    display: inline-block; /* So it doesn't stretch the full width */
+    max-width: 200px;      /* Adjust as needed for narrower text */
+    margin: 0 auto;        /* Center it under the image */
+    padding: 0;            /* No extra padding if you want zero "oval" effect */
+    background: none;      /* Removes any pink background, if it was inherited */
+    border-radius: 0;      /* Ensures no rounded corners around the text */
+    text-align: center;    /* Keep the text centered */
+    color: #fcf5e5;        /* or your desired color */
 }
+
 
 main#carouselSlides {
     grid-row: 1 / 2;

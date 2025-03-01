@@ -1,33 +1,44 @@
-/* Developer Section (similar to .about or .events) */
-.developers-section {
+/* Developer Section (similar to .events, .about, etc.) */
+.developers {
     max-width: 1200px;
-    margin: 50px auto;
+    margin: 50px auto; 
     padding: 20px;
-    text-align: left; /* or center if you prefer */
 }
 
-/* Developer Container */
+/* Container for developer text and grid */
 .developers-container {
+    max-width: 1000px;
     margin: 0 auto;
     text-align: left;
 }
 
-/* Developer Page Grid */
+/* Center the H2 if desired, or leave it left-aligned */
+.developers-container h2 {
+    text-align: center; /* consistent with other pages' headings */
+    margin-bottom: 20px;
+}
+
+/* Ensure paragraphs are left-aligned */
+.developers-container p {
+    text-align: left;
+    margin-bottom: 15px; /* spacing between paragraphs */
+}
+
+/* Developer Grid */
 .developers-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     max-width: 800px;
     margin: 30px auto;
     padding: 20px;
 }
 
-/* Individual Developer Card (no border, no shadow) */
+/* Individual Developer Card */
 .developer {
     text-align: center;
-    /* Remove border/background if you want it minimal */
-    /* border: 1px solid #ddd; */
-    /* background-color: #f9f9f9; */
+    border:1px solid #ddd;
+    background-color: #f9f9f9;
     padding: 20px;
     border-radius: 10px;
 }
@@ -51,9 +62,9 @@
     text-decoration: underline;
 }
 
-/* Responsive Design */
+/* Responsive for smaller screens */
 @media (max-width: 768px) {
     .developers-grid {
-        grid-template-columns: 1fr; /* stack in 1 column */
+        grid-template-columns: 1fr; /* single column on mobile */
     }
 }
