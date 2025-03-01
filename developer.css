@@ -3,7 +3,7 @@
     background: url("../images/DeveloperBackground.jpg") center/cover no-repeat;
     padding: 100px 0;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
 }
 
@@ -12,13 +12,8 @@
     max-width: 1000px;
     padding: 40px;
     border-radius: 15px;
-    text-align: center;
-}
+    text-align: left;
 
-/* Space Between Navbar and H2 */
-h2 {
-    margin-top: 40px;
-    font-size: 28px;
 }
 
 /* Developer Section Grid */
