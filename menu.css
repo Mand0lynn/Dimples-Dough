@@ -68,82 +68,73 @@
 /* Contact Section (Image + Form) */
 #contact {
   display: flex;
-  align-items: stretch; /* Ensures both image & text fill container height */
+  align-items: center; /* Centers the image & form vertically */
   gap: 40px;
   max-width: 1200px;
   margin: 50px auto;
   padding: 20px;
 }
 
-/* Make the image fill half (or any fraction) of the container width 
-   and match the container’s full height */
+/* Let the image be a fixed or max width, not forced to fill container height */
 .contact-image {
-  flex: 0 0 50%;       /* 50% of the container’s width */
-  height: 100%;        /* Match container height */
-  object-fit: cover;   /* Fill the box, cropping if necessary */
+  flex: 0 0 400px; /* or any fixed width you prefer, e.g. 300px */
+  max-width: 100%; /* ensures it shrinks if screen is smaller than 400px */
+  height: auto;    /* maintains natural aspect ratio */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* The form/text takes the remaining space */
+/* The form takes the remaining space */
 .contact-form {
   flex: 1;
   text-align: left;
 }
 
-
 .contact-form h2 {
-    text-align: center;
+  text-align: center;
 }
 
 /* Form Fields */
 .contact-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .contact-form form input[type="email"],
 .contact-form form textarea {
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0;
-    font-family: var(--font-body);
-    font-size: 16px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 /* Thank-you message hidden by default */
 #form-message {
-    display: none;
-    font-style: italic;
-    color: green;
-    text-align: center;
-    margin-top: 10px;
+  display: none;
+  font-style: italic;
+  color: green;
+  text-align: center;
+  margin-top: 10px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .menu-intro,
-    .menu-layout,
-    #contact {
-        flex-direction: column;
-        text-align: center;
-    }
+  #contact {
+    flex-direction: column; 
+    text-align: center;
+  }
 
-    .side-image,
-    .menu-side-image {
-        width: 150px;
-    }
+  .contact-image {
+    width: 90%; 
+    margin-bottom: 20px;
+  }
 
-    .contact-image {
-        width: 90%;
-        margin-bottom: 20px;
-    }
-
-    .contact-form {
-        text-align: center;
-    }
+  .contact-form {
+    text-align: center;
+  }
 }
