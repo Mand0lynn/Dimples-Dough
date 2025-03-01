@@ -46,6 +46,15 @@
     align-self: center; /* Ensures proper alignment */
 }
 
+/* Make event-page links use secondary color, then primary color on hover */
+.events a {
+    color: var(--secondary-color);
+}
+
+.events a:hover {
+    color: var(--primary-color);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .events-container {
