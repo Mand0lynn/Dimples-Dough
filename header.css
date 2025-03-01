@@ -23,14 +23,21 @@
     padding: 5px;
 }
 
+.logo-link {
+    display: inline-block; /* so it only wraps the image, not the entire row */
+    text-align: center;    /* optional, if you want the link center-aligned */
+}
+
+/* Keep or adjust your existing .logo rules as needed */
 .logo {
-    display: block;
+    display: block;  /* ensures the anchor expands to image size vertically */
     margin: 0 auto;
     height: 250px;
     width: 250px;
     margin-bottom: 25px;
     margin-top: 50px;
 }
+
 
 .navbar {
     text-align: center;
