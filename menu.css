@@ -67,26 +67,30 @@
 
 /* Contact Section (Image + Form) */
 #contact {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 20px;
+  display: flex;
+  align-items: stretch; /* Ensures both image & text fill container height */
+  gap: 40px;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
 }
 
+/* Make the image fill half (or any fraction) of the container width 
+   and match the container’s full height */
 .contact-image {
-    flex: 2; /* Larger image portion */
-    max-width: 600px;
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: block;
+  flex: 0 0 50%;       /* 50% of the container’s width */
+  height: 100%;        /* Match container height */
+  object-fit: cover;   /* Fill the box, cropping if necessary */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* The form/text takes the remaining space */
 .contact-form {
-    flex: 1; /* Smaller form portion */
-    text-align: left;
+  flex: 1;
+  text-align: left;
 }
+
 
 .contact-form h2 {
     text-align: center;

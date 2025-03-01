@@ -24,25 +24,23 @@
 }
 
 .header-logo-section {
-  text-align: center;
+  text-align: center; /* Centers inline/inline-block children */
   margin: 0 auto;
 }
 
 /* The link itself can be inline-block so it only wraps the image */
 .logo-link {
   display: inline-block;
-  margin: 0 auto; /* ensures horizontal centering */
+  margin: 0 auto; /* ensures horizontal centering if the parent is text-align: center */
 }
 
 /* The logo image is sized as you like */
 .logo {
-  display: block; 
-  width: 250px;  /* or your desired size */
-  height: auto;  /* maintain aspect ratio */
-  margin: 0 auto 25px; /* center within the link, add bottom spacing */
+  display: block;
+  width: 250px; 
+  height: auto;
+  margin: 0 auto 25px; 
 }
-
-
 
 .navbar {
     text-align: center;

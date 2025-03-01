@@ -12,17 +12,17 @@
     text-align: left;
 }
 
-/* Center the H2 if desired, or leave it left-aligned */
+/* Center the H2 if desired */
 .developers-container h2 {
-    text-align: center; /* consistent with other pages' headings */
+    text-align: center; 
     margin-bottom: 20px;
 }
 
-/* Ensure paragraphs are left-aligned */
+/* General paragraphs: NOT bold */
 .developers-container p {
     text-align: center;
-    text-style: bold;
-    margin-bottom: 15px; /* spacing between paragraphs */
+    margin-bottom: 15px; 
+    font-weight: normal;  /* or remove entirely if you want the default weight */
 }
 
 /* Developer Grid */
@@ -38,7 +38,7 @@
 /* Individual Developer Card */
 .developer {
     text-align: center;
-    border:1px solid #ddd;
+    border: 1px solid #ddd;
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 10px;
@@ -51,6 +51,11 @@
     border-radius: 50%;
     margin-bottom: 10px;
     object-fit: cover;
+}
+
+/* Make the developer name bold, but not other <p> elements */
+.developer > p {
+    font-weight: bold;
 }
 
 /* Developer Links */
@@ -66,6 +71,6 @@
 /* Responsive for smaller screens */
 @media (max-width: 768px) {
     .developers-grid {
-        grid-template-columns: 1fr; /* single column on mobile */
+        grid-template-columns: 1fr;
     }
 }
