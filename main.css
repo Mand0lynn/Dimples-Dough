@@ -1,11 +1,34 @@
-/* Import Merriweather from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+/* Global CSS for Dimples & Dough */
 
-/* Global Styles */
+/* CSS Variables for Consistency */
+:root {
+    --primary-color: #ffb2d9; /* Main pink color */
+    --secondary-color: #ff69b4; /* Secondary pink color */
+    --text-color: black; /* Default text color */
+    --font-primary: "Playwrite IT Moderna", cursive; /* Primary font for headings */
+    --font-secondary: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Secondary font for body text */
+    --font-body: 'Montserrat', sans-serif; /* Default body font */
+    --border-radius: 10px; /* Default border radius for buttons, images, etc. */
+    --transition-speed: 0.3s; /* Default transition speed for hover effects */
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+/* Global Body Styles */
 body {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    color: black;
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--text-color);
     background-color: white;
     margin: 0;
     padding: 0;
@@ -15,41 +38,43 @@ body {
 a {
     text-decoration: none;
     font-weight: bold;
-    color: black;
-    transition: color 0.3s ease;
+    color: var(--text-color);
+    transition: color var(--transition-speed) ease;
 }
 
 a:hover {
-    color: #ff69b4;
+    color: var(--secondary-color);
 }
 
 /* Global Buttons */
 button,
-.button {  
+.button {
     display: inline-block;
     font-size: 1rem;
     padding: 10px 15px;
-    border: 2px solid #ff69b4;
-    background: transparent;
-    color: black;
+    border: 2px solid var(--secondary-color);
+    background: var(--primary-color);
+    color: var(--text-color);
     cursor: pointer;
-    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    transition: background var(--transition-speed) ease-in-out, color var(--transition-speed) ease-in-out;
     text-align: center;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
+    font-family: var(--font-primary);
+    font-weight: normal;
 }
 
 button:hover,
 .button:hover {
-    background: #ff69b4;  
-    color: white;         
-    border: 2px solid #ff69b4; 
+    background: var(--secondary-color);
+    color: white;
+    border: 2px solid var(--secondary-color);
 }
 
 /* Global Dividers */
 .divider {
     width: 80%;
-    margin: 10px auto;
-    border: 1px solid #ff69b4;
+    margin: 50px auto;
+    border: 1px solid var(--secondary-color);
 }
 
 /* Page Structure */
@@ -59,24 +84,39 @@ main {
 }
 
 /* Section Headers */
-h1, h3 {
-    font-family: 'Montserrat', sans-serif;
-    color: black;
+h1, h2, h3 {
+    font-family: var(--font-body);
+    color: var(--secondary-color); /* Updated to use secondary color */
 }
 
-/* Override h2 to use Merriweather and pink color */
 h2 {
-    font-family: 'Libre Baskerville', serif;
-    color: #ff69b4;
+    font-family: var(--font-primary);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 20px; /* add space below the h2 */
+    color: var(--secondary-color); /* Ensure h2 uses secondary color */
 }
 
-/* Global Social Media Icons */
+/* Paragraph Styles */
+p {
+    font-family: var(--font-body);
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 20px;
+}
+
+/* Social Media Icons */
 .socials {
     margin-top: 5px;
     margin-right: 5px;
     float: right;
     height: 40px;
     width: 40px;
+    transition: background-color var(--transition-speed) ease;
 }
 
 .socials:hover {
@@ -99,4 +139,224 @@ h2 {
         flex-direction: column;
         text-align: center;
     }
+}
+
+/* About Section */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    margin: 50px auto;
+    gap: 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.about-container {
+    max-width: 600px;
+    padding: 20px;
+    text-align: left;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 300px;
+}
+
+.about-image img {   
+    height: auto;
+    max-height: 620px;
+    border-radius: var(--border-radius);
+}
+
+/* Responsive About Section */
+@media screen and (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-container {
+        max-width: 100%;
+    }
+
+    .about-image {
+        max-width: 250px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
+.footer img {
+    height: 200px;
+    width: 200px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links a {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-socials img {
+    height: 30px;
+    width: auto;
+}
+
+.footer-contact p {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    margin: 0;
+}
+
+.footer-contact p:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 20px;
+    color: var(--text-color);
+}
+
+/* Carousel Section */
+#Carousel {
+    background-color: white;
+    height: 550px;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 500px 0px;
+    grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.item img {
+    width: 250px;
+    height: 300px;
+    border-radius: var(--border-radius);
+}
+
+.name {
+    margin-bottom: 2px;
+    font-family: var(--font-primary);
+    font-size: 25px;
+    text-align: center;
+}
+
+.caption {
+    font-style: italic;
+    font-family: var(--font-primary);
+    font-size: 20px;
+    text-align: center;
+    color: #fcf5e5;
+}
+
+/* Logo */
+.logo {
+    display: block;
+    margin: 20px auto 25px;
+    height: 250px;
+    width: 250px;
+}
+
+/* Highlight Class */
+.highlight {
+    color: var(--secondary-color);
+}
+
+/* General Styling */
+main {
+    padding: 5px;
+    text-align: center;
+}
+
+/* Contact Section */
+#contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.contact-image {
+    width: 45%;
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.contact-form {
+    width: 50%;
+    max-width: 400px;
+    text-align: left;
+}
+
+.contact-form h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.contact-form p {
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+}
+
+/* Form Inputs */
+.contact-form input,
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-family: var(--font-body);
+}
+
+.contact-form input {
+    border: 1px solid #ccc;
+}
+
+/* Dynamic Textarea */
+#message {
+    width: 100%;
+    min-height: 40px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: white;
+    font-family: inherit;
+    overflow-y: auto;
+    font-size: 15px;
+}
+
+/* Hidden Form Message */
+.hidden {
+    display: none;
 }

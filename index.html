@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="carousel.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap" rel="stylesheet">
 </head>
 
 <body class="home-page">
@@ -19,26 +22,43 @@
 
     <!-- Page Wide Photo -->
     <section class="TopImage">
-        <img src="images/pieslong.jpg" alt="Pies">
-        <div class="motto">Spreading Love & Happiness With Baked Goods! </div>
+        <img src="images/Tart for top.jpg" alt="Pies">
+        <div class="motto">Insert Words Here</div>
     </section>
 
-     <!-- Welcome Message -->
+    <hr class="divider">
+
+    <!-- Welcome Message -->
     <section class="welcome-message">
         <div class="welcome-container"> 
-            <h2 class="message">Small-batch bakes, big heart</h2>
-            <p> At Dimples & Dough, every treat is made with care, creativity, and a sprinkle of joy.  <br>From custom orders to seasonal specialties, we believe in crafting sweet moments that feel just as good as they taste.<br><br>
-            Whether you’re celebrating something special or simply treating yourself, we’d love to bake something just for you. <br><br>Browse our menu, get inspired, and let’s create something 
-            delicious together.<br><br></p>
-            <p align="center"><em>Have a custom request?</em></p><br>
-            <a href="menu.html#contact" class="button">Let’s Chat</a>
-        </section>
+            <h2 class="message">Small-batches, big heart</h2>
+            <p> At Dimples & Dough, every treat is made with care, creativity, and a <i>sprinkle of joy</i>.
+                <br><br>
+                From custom orders to seasonal specialties, we believe in crafting sweet moments that feel just as good as they taste.
+                <br><br>
+                Whether you’re celebrating something special or simply treating yourself, we’d love to bake something <i>just for you.</i><br>
+                <br>
+                Browse our menu, get inspired, and let’s create something delicious together.
+                <br><br>
+            </p>
+            <p><em>Have a custom request?</em></p>
+            <br><br>
+            <a href="menu.html#contact" class="button">Let's Create Something!</a>
+        </div>
+    </section>
 
-    <!-- Replace the iframe with a div for the carousel -->
-    <div id="carousel"></div>
+    <hr class="divider">
 
+    <!-- Image Carousel (Dynamically Loaded) -->
+    <iframe src="carousel/GoodCarousel" width="100%" height="500px" scrolling="no" seamless="seamless" style="border:none;">
+    </iframe> 
+
+    <!-- Footer (Dynamically Loaded) -->
     <div id="footer"></div>
 
+    <!-- JavaScript for dynamic loading -->
     <script src="scripts.js"></script>
+
 </body>
+
 </html>

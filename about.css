@@ -1,45 +1,61 @@
+/* About Section - Flexbox Layout */
 .about {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 900px;
+    align-items: center; 
+    gap: 40px; 
+    max-width: 1200px;
     margin: 50px auto;
-    gap: 40px;
-    flex-direction: row; /* Image left, text right */
-    flex-wrap: wrap; /* Allows stacking on small screens */
+    padding: 20px; 
 }
 
-.about-container {
-    max-width: 600px; /* Keeps text from stretching too wide */
-    padding: 20px;
-    text-align: left;
-}
-
+/* About Image Styling */
 .about-image {
-    flex: 1;
-    max-width: 300px; /* Sets an upper limit */
+    flex: 1; 
+    max-width: 50%; 
 }
 
-.about-image img {
-    width: 100%; /* Makes it responsive */
-    height: auto; /* Maintains aspect ratio */
-    max-height: 500px; /* Prevents excessive height */
+.about-image img {    
+    height: auto;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Make the image stack above text on smaller screens */
-@media screen and (max-width: 768px) {
+/* About Text Styling */
+.about-text {
+    flex: 1; 
+    max-width: 50%; 
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1rem; 
+    line-height: 1.6; 
+    margin-bottom: 20px;
+}
+
+.about-text .button {
+    margin-top: 20px; 
+    text-align: center; 
+    display: inline-block; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
     .about {
-        flex-direction: column; /* Stacks image above text */
-        text-align: center;
+        flex-direction: column; 
+        text-align: center; 
+        gap: 20px; 
     }
 
-    .about-container {
-        max-width: 100%; /* Allows text to expand */
+    .about-image,
+    .about-text {
+        max-width: 100%; 
     }
 
-    .about-image {
-        max-width: 250px; /* Keeps image smaller on mobile */
-        margin-bottom: 20px; /* Adds spacing */
+    .about-image img {
+        max-width: 100%; 
     }
-}

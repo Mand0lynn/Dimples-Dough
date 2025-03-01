@@ -1,15 +1,57 @@
-/* Center everything inside .events-container */
+/* Events Page Container - Flexbox Layout */
 .events-container {
-  text-align: center;
+    max-width: 1200px; 
+    margin: 50px auto; 
+    padding: 20px; 
+    display: flex; 
+    align-items: center; 
+    gap: 40px; 
 }
 
-/* (Optional) You can also adjust spacing if needed */
-.events-container p {
-  margin: 1rem 0; 
+/* Text Content Styling */
+.events-container .text-content {
+    flex: 1; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
 }
 
-/* Keep buttons centered as well */
-.events-container a.button {
-  display: inline-block;
-  margin-top: 1rem;
+/* Center the h2 element */
+.events-container .text-content h2 {
+    text-align: center; 
+    width: 100%; 
+}
+
+/* Left-align the rest of the text */
+.events-container .text-content p {
+    text-align: left; 
+    width: 100%; 
+}
+
+/* Button Styling for Events Page */
+.events-container .button {
+    margin-top: 20px;
+    align-self: center; 
+    display: inline-block; 
+}
+
+/* Image Styling */
+.events-container .event-image {
+    max-width: 400px; 
+    height: auto; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .events-container {
+        flex-direction: column; 
+        text-align: left; 
+        gap: 20px; 
+    }
+
+    .events-container .event-image {
+        max-width: 100%; 
+    }
 }

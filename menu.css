@@ -15,7 +15,7 @@ main {
 .intro {
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
     gap: 40px;
     padding: 10 px;
     flex-wrap: wrap;
@@ -37,20 +37,22 @@ main {
 }
 
 /* Contact Section */
+
 #contact {
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
     padding: 20px;
 }
 
 .contact-image {
-    width: 25%;
-    max-width: 400px;
+    width: 45%;
+    max-width: 600px;
     height: auto;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .contact-form {
@@ -61,12 +63,13 @@ main {
 
 .contact-form h2 {
     font-size: 1.5rem;
-    color: #ff69b4;
+    color: #333;
 }
 
 .contact-form p {
-    font-size: 1rem;
+    font-size: 18px;
     color: #666;
+    text-align: center;
 }
 
 /* Form Styling */
@@ -75,25 +78,16 @@ main {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    font-size: 1rem;
+    font-size: 15px;
+    font-family: var(--font-body);
 }
 
 .contact-form input {
     border: 1px solid #ccc;
+
 }
 
-.contact-form button {
-    background: transparent;
-    border: 2px ff69b4;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
 
-.contact-form button:hover {
-    background: ff69b4;
-    color: white;
-}
 
 /* Dynamic Textarea */
 #message {
@@ -104,7 +98,8 @@ main {
     background: white;
     font-family: inherit;
     overflow-y: auto;
-}
+    font-size: 15px;
+    font-family: var(--font-body);
 
 /* Form Message */
 .hidden {
