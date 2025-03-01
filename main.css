@@ -150,35 +150,4 @@ p {
     }
 }
 
-/* Mini Banner - Three Square Images */
-.mini-banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px; /* Space between images */
-    margin: 20px auto; /* Adds spacing below H2 */
-    max-width: 900px; /* Keeps images contained */
-}
-
-/* Mini Banner Images */
-.mini-banner img {
-    width: 100px; /* Adjust display size */
-    height: 100px;
-    object-fit: cover; /* Ensures images stay square */
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .mini-banner {
-        flex-direction: row; /* Keeps images in a row */
-        gap: 10px;
-    }
-
-    .mini-banner img {
-        width: 80px; /* Adjusts for smaller screens */
-        height: 80px;
-    }
-}
 
