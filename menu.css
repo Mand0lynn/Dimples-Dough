@@ -86,7 +86,7 @@
 
 /* Let the image and form each take half the container (adjust as desired) */
 .contact-image {
-  flex: 1;             /* or flex: 0 0 50% if you want exactly half */
+  flex: 0 0 50%;             /* or flex: 0 0 50% if you want exactly half */
   width: 100%;         /* ensures it fills its flex area horizontally */
   height: 100%;        /* ensures it fills the container’s height */
   object-fit: cover;   /* image will fill the box, cropping if needed */
