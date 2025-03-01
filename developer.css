@@ -10,10 +10,8 @@
 /* Developers Container */
 .developers-container {
     max-width: 1000px;
-    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
@@ -39,8 +37,7 @@ h2 {
     border: 1px solid #ddd;
     padding: 20px;
     border-radius: 10px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
 }
 
 /* Developer Images */
